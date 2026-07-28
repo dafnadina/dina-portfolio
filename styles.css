@@ -1,7 +1,7 @@
 :root {
   --ink: #000;
   --muted: #737373;
-  --soft: #f4f0f6;
+  --soft: #efefef;
   --sidebar: 280px;
   --content-left: 74px;
 }
@@ -83,7 +83,7 @@ h1 { position: absolute; top: 235px; left: 74px; width: 762px; }
 
 h1 span {
   color: transparent;
-  background: linear-gradient(90deg, #f4eff7 6.25%, #bba16e 80.288%, #b38dce);
+  background: linear-gradient(90deg, #bcb0c4, #c1b59e 48.077%, #b38dce);
   background-clip: text;
   -webkit-background-clip: text;
 }
