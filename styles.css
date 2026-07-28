@@ -112,6 +112,8 @@ h1 span {
   cursor: pointer;
   isolation: isolate;
   outline: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 .project-card::after {

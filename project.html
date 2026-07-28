@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Product design case study by Dina Radosavlevich." />
+    <title>Project — Dina Radosavlevich</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&family=Karla:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="project.css" />
+  </head>
+  <body>
+    <header class="case-header"><a href="index.html">Dina Radosavlevich</a></header>
+    <aside class="case-sidebar">
+      <nav>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#resume">Resume</a>
+      </nav>
+    </aside>
+
+    <main class="case-page">
+      <a class="back-link" href="index.html#work">&lt; back</a>
+
+      <section class="case-intro">
+        <div class="case-title-row">
+          <h1 data-project="title"></h1>
+          <div class="case-actions" data-project="links"></div>
+        </div>
+        <dl class="case-meta">
+          <div><dt>team:</dt><dd data-project="team"></dd></div>
+          <div><dt>duration:</dt><dd data-project="duration"></dd></div>
+          <div><dt>tools:</dt><dd data-project="tools"></dd></div>
+        </dl>
+      </section>
+
+      <figure class="case-hero">
+        <img data-project="hero" alt="" />
+        <figcaption data-project="summary"></figcaption>
+      </figure>
+
+      <section class="case-story">
+        <div class="story-tabs" role="tablist" aria-label="Case study sections">
+          <button type="button" role="tab" aria-selected="true" data-tab="overview">overview</button>
+          <button type="button" role="tab" aria-selected="false" data-tab="problem">problem</button>
+          <button type="button" role="tab" aria-selected="false" data-tab="solution">solution</button>
+        </div>
+        <p class="story-copy" data-project="story"></p>
+        <img class="story-image" data-project="storyImage" alt="Project overview" />
+      </section>
+
+      <section class="case-metrics" data-project="metrics"></section>
+
+      <section class="screens-panel">
+        <div class="screens-copy">
+          <h2>Screens</h2>
+          <div class="screen-description">
+            <h3 data-project="screenTitle"></h3>
+            <p data-project="screenText"></p>
+          </div>
+          <div class="screen-controls">
+            <button type="button" data-screen-prev aria-label="Previous screen"><img src="assets/project/arrow-left.svg" alt="" /></button>
+            <span data-project="screenCount"></span>
+            <button type="button" data-screen-next aria-label="Next screen"><img src="assets/project/arrow-right.svg" alt="" /></button>
+          </div>
+        </div>
+        <div class="screen-preview"><img data-project="screenImage" alt="Project screen" /></div>
+      </section>
+
+      <h2 class="case-availability">Available for work!</h2>
+    </main>
+
+    <footer class="case-footer">
+      <a href="mailto:dina.radosavlevich@gmail.com">dina.radosavlevich@gmail.com</a>
+      <a href="https://t.me/dafnadina" target="_blank" rel="noreferrer">Telegram</a>
+      <a href="https://www.linkedin.com/in/dafnadina" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="https://www.behance.net/radosavlevich" target="_blank" rel="noreferrer">Behance</a>
+    </footer>
+
+    <script src="project-data.js"></script>
+    <script src="project.js"></script>
+  </body>
+</html>
