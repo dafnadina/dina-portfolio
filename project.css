@@ -20,7 +20,9 @@ h1, h2 { margin: 0; font-family: "Kaisei Opti", serif; font-size: 48px; font-wei
 .case-actions img { width: 19px; height: 19px; transform: rotate(45deg); }
 .case-meta { position: absolute; top: 438px; left: 74px; display: flex; width: 1012px; justify-content: space-between; margin: 0; color: #7f3324; font-size: 16px; line-height: 40px; }
 .case-meta div { display: flex; gap: 8px; }
-.case-meta div:first-child { color: var(--ink); }
+.case-meta div:first-child,
+.case-meta div:first-child dt,
+.case-meta div:first-child dd { color: var(--ink); }
 .case-meta dd { margin: 0; }
 .case-hero { position: absolute; top: 494px; left: 74px; width: 1012px; height: 350px; margin: 0; overflow: hidden; border-radius: 8px; }
 .case-hero-media { position: absolute; inset: 0; }
@@ -37,6 +39,7 @@ h1, h2 { margin: 0; font-family: "Kaisei Opti", serif; font-size: 48px; font-wei
 .case-metrics { position: absolute; top: 1550px; left: 74px; display: grid; width: 1012px; grid-template-columns: repeat(2, 1fr); gap: 40px; }
 .metric-card { display: flex; height: 224px; align-items: center; gap: 10px; padding: 10px 24px; border-radius: 8px; background: #2e2e2e; color: #fff; text-align: center; }
 .metric-value { display: flex; flex: 0 0 200px; height: 200px; flex-direction: column; align-items: center; justify-content: center; gap: 10px; border-radius: 50%; background: linear-gradient(90deg, rgba(244,239,247,.58) 6.25%, rgba(187,161,110,.58) 80.288%, rgba(179,141,206,.58)); color: #fff; }
+.metric-card:first-child .metric-value { background: linear-gradient(90deg, #f4eff7 6.25%, #bba16e 80.288%, #b38dce); color: var(--ink); }
 .metric-value strong { font-size: 36px; font-weight: 400; }
 .metric-value span { width: 110px; font-size: 16px; }
 .metric-card p { width: 223px; margin: 0; color: #fff; font-size: 16px; }
