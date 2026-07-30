@@ -21,14 +21,16 @@ h1, h2 { margin: 0; font-family: "Kaisei Opti", serif; font-size: 48px; font-wei
 .case-meta div { display: flex; gap: 8px; }
 .case-meta dd { margin: 0; }
 .case-hero { position: absolute; top: 426px; left: 74px; width: 1012px; height: 350px; margin: 0; overflow: hidden; border-radius: 8px; }
-.case-hero > img { width: 100%; height: 100%; object-fit: cover; image-rendering: auto; }
+.case-hero-media { position: absolute; inset: 0; }
+.case-hero-media img, .case-hero-media iframe { display: block; width: 100%; height: 100%; border: 0; object-fit: cover; }
 .case-hero figcaption { position: absolute; bottom: 0; left: 50%; width: 540px; padding: 12px 20px 8px; transform: translateX(-50%); border-radius: 8px 8px 0 0; background: #fff; color: #565454; font-size: 16px; text-align: center; letter-spacing: .02em; }
 .case-story { position: static; }
 .story-tabs { position: absolute; top: 832px; left: 74px; display: flex; gap: 48px; }
 .story-tabs button { border: 0; padding: 0; color: var(--muted); background: none; font: 400 48px "Kaisei Opti", serif; cursor: pointer; }
 .story-tabs button[aria-selected="true"] { color: var(--ink); }
 .story-copy { position: absolute; top: 942px; left: 76px; width: 500px; margin: 0; font-size: 16px; }
-.story-image { position: absolute; top: 1074px; left: 370px; width: 420px; height: 316px; border-radius: 8px; object-fit: cover; }
+.story-media { position: absolute; top: 1074px; left: 370px; width: 420px; height: 316px; overflow: hidden; border-radius: 8px; }
+.story-media img, .story-media iframe { display: block; width: 100%; height: 100%; border: 0; object-fit: cover; }
 .case-metrics { position: absolute; top: 1570px; left: 74px; display: grid; width: 1012px; grid-template-columns: repeat(2, 1fr); gap: 40px; }
 .metric-card { display: flex; height: 224px; align-items: center; gap: 10px; padding: 10px 24px; border-radius: 8px; background: var(--soft); text-align: center; }
 .metric-value { display: flex; flex: 0 0 200px; height: 200px; flex-direction: column; align-items: center; justify-content: center; gap: 10px; border-radius: 50%; background: #2e2e2e; color: #fff; }
@@ -57,7 +59,7 @@ h1, h2 { margin: 0; font-family: "Kaisei Opti", serif; font-size: 48px; font-wei
   .case-header a { font-size: 14px; }
   .case-sidebar { display: none; }
   .case-page { display: flex; width: auto; height: auto; min-height: 0; flex-direction: column; gap: 64px; margin: 0; padding: 48px 20px 80px; }
-  .back-link, .case-title-row, .case-meta, .case-hero, .story-tabs, .story-copy, .story-image, .case-metrics, .screens-panel, .case-availability { position: static; width: auto; }
+  .back-link, .case-title-row, .case-meta, .case-hero, .story-tabs, .story-copy, .story-media, .case-metrics, .screens-panel, .case-availability { position: static; width: auto; }
   .back-link { font-size: 16px; }
   .case-title-row { align-items: flex-start; flex-direction: column; gap: 28px; }
   h1, h2 { font-size: 40px; }
@@ -71,7 +73,7 @@ h1, h2 { margin: 0; font-family: "Kaisei Opti", serif; font-size: 48px; font-wei
   .story-tabs { gap: 22px; overflow-x: auto; }
   .story-tabs button { font-size: 32px; }
   .story-copy { margin: 0; }
-  .story-image { height: 280px; object-fit: cover; }
+  .story-media { height: 280px; }
   .case-metrics { display: grid; grid-template-columns: 1fr; gap: 16px; }
   .metric-card { height: auto; min-height: 190px; }
   .metric-value { flex-basis: 150px; height: 150px; }

@@ -5,7 +5,7 @@ window.PROJECTS = {
     duration: "6 months",
     tools: "figma, figjam, photoshop, illustrator",
     summary: "A platform for discovering digital humanities projects, job opportunities, and tools for students and early-career researchers",
-    hero: "assets/project/dh-hero.png",
+    hero: { type: "video", src: "https://player.vimeo.com/video/1109030775?app_id=122963" },
     links: [
       { label: "figma", url: "https://www.figma.com/design/Dw80Ci9GIi59GxCRqtmXXu/Untitled" },
       { label: "behance", url: "https://www.behance.net/radosavlevich" }
@@ -13,15 +13,15 @@ window.PROJECTS = {
     sections: {
       overview: {
         text: "Digital humanities projects are hard to find. Students can't find opportunities, researchers struggle to connect with technical specialists, and communities are scattered across different platforms.",
-        image: "assets/project/dh-hero.png"
+        media: { type: "video", src: "https://player.vimeo.com/video/1214242925?app_id=122963" }
       },
       problem: {
         text: "Students and early-career researchers have no single place to discover projects, tools, communities, and relevant opportunities.",
-        image: "assets/project/dh-hero.png"
+        media: { type: "image", src: "assets/project/dh-hero.png" }
       },
       solution: {
         text: "A structured discovery platform connects people, projects, jobs, and tools through clear navigation and a scalable information architecture.",
-        image: "assets/project/dh-screen.png"
+        media: { type: "image", src: "assets/project/dh-screen.png" }
       }
     },
     metrics: [
@@ -41,12 +41,12 @@ window.PROJECTS = {
     duration: "6 months",
     tools: "figma, figjam, photoshop",
     summary: "A data-heavy product designed to make complex operational information easier to understand and act on.",
-    hero: "assets/project-b2b-1.png",
+    hero: { type: "image", src: "assets/project-b2b-1.png" },
     links: [{ label: "figma", url: "https://www.figma.com/design/Dw80Ci9GIi59GxCRqtmXXu/Untitled" }],
     sections: {
-      overview: { text: "A complex B2B workspace redesigned around clarity, prioritization, and fast access to essential data.", image: "assets/project-b2b-1.png" },
-      problem: { text: "Users had to navigate dense information and fragmented workflows to complete routine tasks.", image: "assets/project-b2b-2.png" },
-      solution: { text: "A modular dashboard makes information scannable and turns the most important actions into clear next steps.", image: "assets/project-b2b-2.png" }
+      overview: { text: "A complex B2B workspace redesigned around clarity, prioritization, and fast access to essential data.", media: { type: "image", src: "assets/project-b2b-1.png" } },
+      problem: { text: "Users had to navigate dense information and fragmented workflows to complete routine tasks.", media: { type: "image", src: "assets/project-b2b-2.png" } },
+      solution: { text: "A modular dashboard makes information scannable and turns the most important actions into clear next steps.", media: { type: "image", src: "assets/project-b2b-2.png" } }
     },
     metrics: [
       { value: "20+", label: "User Interviews", text: "Mapped daily workflows and identified the decisions that matter most to users." },

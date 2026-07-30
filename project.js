@@ -5,6 +5,14 @@ let activeScreen = 0;
 
 const field = (name) => document.querySelector(`[data-project="${name}"]`);
 
+function renderMedia(container, media, label, eager = false) {
+  if (media.type === 'video') {
+    container.innerHTML = `<iframe src="${media.src}" title="${label}" loading="${eager ? 'eager' : 'lazy'}" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+    return;
+  }
+  container.innerHTML = `<img src="${media.src}" alt="${label}" loading="${eager ? 'eager' : 'lazy'}" />`;
+}
+
 function renderProject() {
   document.title = `${project.title} — Dina Radosavlevich`;
   field('title').textContent = project.title;
@@ -12,8 +20,7 @@ function renderProject() {
   field('duration').textContent = project.duration;
   field('tools').textContent = project.tools;
   field('summary').textContent = project.summary;
-  field('hero').src = project.hero;
-  field('hero').alt = `${project.title} cover`;
+  renderMedia(field('heroMedia'), project.hero, `${project.title} overview video`, true);
 
   field('links').innerHTML = project.links.map((link) => `
     <a href="${link.url}" target="_blank" rel="noreferrer">
@@ -35,7 +42,7 @@ function renderProject() {
 function renderStory() {
   const section = project.sections[activeTab];
   field('story').textContent = section.text;
-  field('storyImage').src = section.image;
+  renderMedia(field('storyMedia'), section.media, `${project.title} ${activeTab}`);
   document.querySelectorAll('[data-tab]').forEach((tab) => {
     tab.setAttribute('aria-selected', String(tab.dataset.tab === activeTab));
   });
