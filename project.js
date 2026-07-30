@@ -4,10 +4,32 @@ let activeTab = 'overview';
 let activeScreen = 0;
 
 const field = (name) => document.querySelector(`[data-project="${name}"]`);
+const mediaObservers = new WeakMap();
+
+function fitVideo(container, iframe, ratio) {
+  const { width, height } = container.getBoundingClientRect();
+  if (!width || !height) return;
+  if (width / height > ratio) {
+    iframe.style.width = `${width}px`;
+    iframe.style.height = `${width / ratio}px`;
+  } else {
+    iframe.style.height = `${height}px`;
+    iframe.style.width = `${height * ratio}px`;
+  }
+}
 
 function renderMedia(container, media, label, eager = false) {
   if (media.type === 'video') {
     container.innerHTML = `<iframe src="${media.src}" title="${label}" loading="${eager ? 'eager' : 'lazy'}" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+    const iframe = container.querySelector('iframe');
+    const ratio = media.ratio || 16 / 9;
+    requestAnimationFrame(() => fitVideo(container, iframe, ratio));
+    mediaObservers.get(container)?.disconnect();
+    if ('ResizeObserver' in window) {
+      const observer = new ResizeObserver(() => fitVideo(container, iframe, ratio));
+      observer.observe(container);
+      mediaObservers.set(container, observer);
+    }
     return;
   }
   container.innerHTML = `<img src="${media.src}" alt="${label}" loading="${eager ? 'eager' : 'lazy'}" />`;

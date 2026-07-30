@@ -5,7 +5,7 @@ window.PROJECTS = {
     duration: "6 months",
     tools: "figma, figjam, photoshop, illustrator",
     summary: "A platform for discovering digital humanities projects, job opportunities, and tools for students and early-career researchers",
-    hero: { type: "video", src: "https://player.vimeo.com/video/1109030775?app_id=122963" },
+    hero: { type: "video", ratio: 4 / 3, src: "https://player.vimeo.com/video/1109030775?app_id=122963&autoplay=1&muted=1&loop=1&autopause=0&playsinline=1" },
     links: [
       { label: "figma", url: "https://www.figma.com/design/Dw80Ci9GIi59GxCRqtmXXu/Untitled" },
       { label: "behance", url: "https://www.behance.net/radosavlevich" }
@@ -13,7 +13,7 @@ window.PROJECTS = {
     sections: {
       overview: {
         text: "Digital humanities projects are hard to find. Students can't find opportunities, researchers struggle to connect with technical specialists, and communities are scattered across different platforms.",
-        media: { type: "video", src: "https://player.vimeo.com/video/1214242925?app_id=122963" }
+        media: { type: "video", ratio: 8 / 5, src: "https://player.vimeo.com/video/1214242925?app_id=122963&autoplay=1&muted=1&loop=1&autopause=0&playsinline=1" }
       },
       problem: {
         text: "Students and early-career researchers have no single place to discover projects, tools, communities, and relevant opportunities.",
