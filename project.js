@@ -43,6 +43,7 @@ function renderProject() {
   field('tools').textContent = project.tools;
   field('summary').textContent = project.summary;
   renderMedia(field('heroMedia'), project.hero, `${project.title} overview video`, true);
+  renderMedia(field('storyMedia'), project.sections.overview.media, `${project.title} project video`);
 
   field('links').innerHTML = project.links.map((link) => `
     <a href="${link.url}" target="_blank" rel="noreferrer">
@@ -64,7 +65,6 @@ function renderProject() {
 function renderStory() {
   const section = project.sections[activeTab];
   field('story').textContent = section.text;
-  renderMedia(field('storyMedia'), section.media, `${project.title} ${activeTab}`);
   document.querySelectorAll('[data-tab]').forEach((tab) => {
     tab.setAttribute('aria-selected', String(tab.dataset.tab === activeTab));
   });
