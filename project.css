@@ -30,7 +30,7 @@ h1, h2 { margin: 0; font-family: "Kaisei Opti", serif; font-size: 48px; font-wei
 .story-tabs button { border: 0; padding: 0; color: var(--muted); background: none; font: 400 48px "Kaisei Opti", serif; cursor: pointer; }
 .story-tabs button[aria-selected="true"] { color: var(--ink); }
 .story-copy { position: absolute; top: 942px; left: 76px; width: 500px; margin: 0; font-size: 16px; }
-.story-media { position: absolute; top: 1074px; left: 370px; width: 420px; height: 316px; overflow: hidden; border-radius: 8px; }
+.story-media { position: absolute; top: 942px; left: 666px; width: 420px; height: 316px; overflow: hidden; border-radius: 8px; }
 .story-media img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .case-metrics { position: absolute; top: 1570px; left: 74px; display: grid; width: 1012px; grid-template-columns: repeat(2, 1fr); gap: 40px; }
 .metric-card { display: flex; height: 224px; align-items: center; gap: 10px; padding: 10px 24px; border-radius: 8px; background: var(--soft); text-align: center; }
