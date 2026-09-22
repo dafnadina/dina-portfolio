@@ -1,0 +1,18 @@
+.about-page .portfolio-header { height: 305px; }
+
+.about-main { height: 640px; }
+.about-layout { display: flex; width: 861px; margin: 0 auto; align-items: center; gap: 45px; }
+.about-copy { display: flex; width: 400px; flex: 0 0 400px; flex-direction: column; gap: 64px; font-size: 16px; font-weight: 500; letter-spacing: 1.28px; line-height: normal; text-transform: uppercase; }
+.about-copy p { margin: 0; }
+.about-copy .about-location { color: #838383; }
+.portrait-frame { display: flex; width: 416px; height: 414px; flex: 0 0 416px; align-items: flex-end; justify-content: center; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink); padding: 10px; }
+.portrait-frame img { display: block; width: 354px; height: 393px; object-fit: cover; }
+
+@media (max-width: 760px) {
+  .about-page .portfolio-header { height: 250px; }
+  .about-main { height: auto; padding: 0 20px 100px; }
+  .about-layout { width: 100%; flex-direction: column-reverse; align-items: stretch; gap: 56px; }
+  .about-copy { width: 100%; flex-basis: auto; gap: 40px; font-size: 14px; letter-spacing: .9px; }
+  .portrait-frame { width: 100%; height: auto; flex-basis: auto; padding: 10px 0; }
+  .portrait-frame img { width: min(354px, calc(100vw - 40px)); height: auto; margin: 0 auto; }
+}
