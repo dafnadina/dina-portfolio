@@ -11,6 +11,25 @@ html { scroll-behavior: smooth; }
 body { margin: 0; overflow-x: hidden; color: var(--ink); background: var(--page); font-family: "Kode Mono", monospace; font-weight: 400; font-synthesis: none; -webkit-font-smoothing: antialiased; }
 a { color: inherit; text-decoration: none; }
 
+.intro-running { overflow: hidden; }
+.intro-running .identity { position: fixed; z-index: 100; top: 50%; left: 50%; margin: 0; transform: translate(-50%, -50%); animation: identityIntro .9s cubic-bezier(.76, 0, .24, 1) .9s forwards; }
+.intro-running .portfolio-header nav,
+.intro-running .portfolio-main,
+.intro-running .portfolio-footer { visibility: hidden; opacity: 0; }
+.intro-complete .portfolio-header nav { animation: contentIntro .7s cubic-bezier(.22, 1, .36, 1) both; }
+.intro-complete .portfolio-main { animation: contentIntro .7s cubic-bezier(.22, 1, .36, 1) .1s both; }
+.intro-complete .portfolio-footer { animation: contentIntro .7s cubic-bezier(.22, 1, .36, 1) .2s both; }
+
+@keyframes identityIntro {
+  from { top: 50%; transform: translate(-50%, -50%); }
+  to { top: 40px; transform: translate(-50%, 0); }
+}
+
+@keyframes contentIntro {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .portfolio-header { position: relative; height: 380px; padding-top: 40px; text-transform: uppercase; }
 .identity { display: flex; width: max-content; align-items: center; gap: 16px; margin: 0 auto; font-size: 24px; letter-spacing: 1.92px; }
 .identity img { width: 27px; height: 27px; margin: -8px; }
@@ -46,6 +65,11 @@ a { color: inherit; text-decoration: none; }
 .dark-theme .work-meta i, .dark-theme .identity img { filter: invert(1); }
 
 @media (max-width: 760px) {
+  @keyframes identityIntro {
+    from { top: 50%; transform: translate(-50%, -50%); }
+    to { top: 28px; transform: translate(-50%, 0); }
+  }
+
   .portfolio-header { height: 250px; padding: 28px 20px 0; }
   .identity { gap: 9px; font-size: 14px; letter-spacing: .9px; white-space: nowrap; }
   .identity img { width: 17px; height: 17px; margin: -5px; }
@@ -70,4 +94,8 @@ a { color: inherit; text-decoration: none; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .work-image img { transition: none; }
+  .intro-running .identity,
+  .intro-complete .portfolio-header nav,
+  .intro-complete .portfolio-main,
+  .intro-complete .portfolio-footer { animation: none; }
 }
