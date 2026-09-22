@@ -19,7 +19,7 @@ a { color: inherit; text-decoration: none; }
 .portfolio-header nav a.active { color: #fff; background: linear-gradient(90deg, #fff, var(--violet) 55.288%, var(--black)); }
 
 .portfolio-main { height: 565px; padding: 0 50px; }
-.project-strip { display: grid; width: 1341px; grid-template-columns: repeat(4, 335px); margin: 0 auto; border-top: 1px solid var(--ink); }
+.project-strip { display: grid; width: 1341px; grid-template-columns: repeat(4, 335px); margin: 0; border-top: 1px solid var(--ink); }
 .work-card { position: relative; min-width: 0; text-transform: uppercase; }
 .work-image { width: 336px; height: 355px; padding: 10px; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
 .work-card:last-child .work-image { border-right: 0; }
