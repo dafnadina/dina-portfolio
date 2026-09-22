@@ -24,6 +24,7 @@ a { color: inherit; text-decoration: none; }
 .work-image { width: 336px; height: 355px; padding: 10px; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); }
 .work-card:last-child .work-image { border-right: 0; }
 .work-image img { display: block; width: 100%; height: 335px; border: 1px solid var(--ink); border-radius: 48px; object-fit: cover; transition: filter .25s ease, transform .25s ease; }
+.work-image--rendered img { border: 0; }
 .work-card:hover .work-image img, .work-card:focus-visible .work-image img { filter: grayscale(1); transform: scale(.985); }
 .work-meta { display: flex; height: 30px; align-items: center; gap: 16px; padding: 0 11px; color: var(--muted); font-size: 14px; letter-spacing: 1.12px; white-space: nowrap; }
 .work-meta i { position: relative; width: 11px; height: 11px; flex: 0 0 11px; }
