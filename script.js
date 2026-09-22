@@ -1,18 +1,6 @@
-const menuButton = document.querySelector('.menu-button');
-const sidebar = document.querySelector('.sidebar');
+const themeButton = document.querySelector('.theme-switch');
 
-menuButton?.addEventListener('click', () => {
-  const isOpen = sidebar.classList.toggle('is-open');
-  menuButton.setAttribute('aria-expanded', String(isOpen));
-});
-
-sidebar?.addEventListener('click', (event) => {
-  if (event.target.matches('a')) {
-    sidebar.classList.remove('is-open');
-    menuButton?.setAttribute('aria-expanded', 'false');
-  }
-});
-
-document.querySelector('[data-more-projects]')?.addEventListener('click', () => {
-  document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
+themeButton?.addEventListener('click', () => {
+  const isDark = document.body.classList.toggle('dark-theme');
+  themeButton.innerHTML = isDark ? '<span>Light / </span><strong>Dark</strong>' : '<strong>Light</strong><span> / Dark</span>';
 });
