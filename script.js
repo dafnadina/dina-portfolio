@@ -9,7 +9,9 @@ const finishIntro = () => {
 if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   finishIntro();
 } else {
-  identity?.addEventListener('animationend', finishIntro, { once: true });
+  identity?.addEventListener('animationend', (event) => {
+    if (event.target === identity && event.animationName === 'identityIntro') finishIntro();
+  });
 }
 
 themeButton?.addEventListener('click', () => {
