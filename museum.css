@@ -7,9 +7,9 @@
 .case-hero { position: absolute; top: 237px; left: 49px; display: flex; }
 .hero-small, .hero-large { height: 357px; border: 1px solid #000; padding: 10px; }
 .hero-small { width: 336px; }
-.hero-large { width: 948px; margin-left: -1px; background-color: #fff; background-image: linear-gradient(45deg,#eee 25%,transparent 25%),linear-gradient(-45deg,#eee 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#eee 75%),linear-gradient(-45deg,transparent 75%,#eee 75%); background-position: 0 0,0 8px,8px -8px,-8px 0; background-size: 16px 16px; }
+.hero-large { width: 948px; margin-left: -1px; }
 .hero-small img { width: 100%; height: 335px; border: 1px solid #000; border-radius: 48px; object-fit: cover; }
-.hero-large::after { display: block; height: 335px; border: 1px solid #000; border-radius: 48px; content: ""; }
+.hero-large img { display: block; width: 100%; height: 335px; border: 1px solid #000; border-radius: 48px; object-fit: cover; }
 .case-details { position: absolute; top: 607px; left: 49px; display: flex; }
 .project-links { width: 335px; }
 .project-links a { display: flex; width: 219px; height: 40px; align-items: center; justify-content: space-between; border-bottom: 1px solid #000; padding: 8px; font-size: 14px; text-transform: lowercase; }
