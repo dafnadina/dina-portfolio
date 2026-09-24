@@ -68,12 +68,12 @@ a { color: inherit; text-decoration: none; }
 .work-card h2 { width: 262px; margin: 0 0 0 11px; font-size: 16px; font-weight: 500; line-height: normal; letter-spacing: 1.28px; }
 .work-card:not(:first-child)::after { position: absolute; top: 355px; left: 0; width: 1px; height: 100px; background: var(--ink); content: ""; }
 
-.portfolio-footer { position: relative; height: 446px; overflow: hidden; background: var(--black); color: #fff; text-transform: uppercase; }
+.portfolio-footer { position: relative; height: 446px; overflow: hidden; background: linear-gradient(90deg, var(--black) 0%, #0637ff 52%, var(--black) 100%); color: #fff; text-transform: uppercase; }
 .contact-block { position: absolute; top: 66px; left: 50%; display: flex; transform: translateX(-50%); flex-direction: column; align-items: center; gap: 14px; }
 .contact-block h2 { width: 100%; margin: 0; color: var(--violet); font-size: 48px; font-weight: 500; line-height: normal; letter-spacing: 3.84px; text-align: center; white-space: nowrap; }
 .contact-links { display: flex; gap: 64px; font-size: 16px; letter-spacing: 1.28px; white-space: nowrap; }
 .contact-links a { transition: color .2s ease; }
-.contact-links a:hover, .contact-links a:focus-visible { color: #0637ff; outline: none; }
+.contact-links a:hover, .contact-links a:focus-visible { color: #c8d5ff; outline: none; }
 .theme-switch { position: absolute; bottom: 45px; left: 50%; border: 0; padding: 0; transform: translateX(-50%); color: var(--violet); background: none; font: 400 16px "Kode Mono", monospace; letter-spacing: 1.28px; text-transform: uppercase; cursor: pointer; }
 .theme-switch strong { color: #fff; font-weight: 700; }
 
