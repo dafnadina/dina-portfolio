@@ -73,9 +73,21 @@
         </section>
 
         <section class="screens-section">
-          <div class="screens-copy"><div><h2>Screens</h2><p data-screen-name>#1 Home</p></div><div class="screen-controls"><button type="button" data-screen-prev><img src="assets/museum/arrow-prev.svg" alt="Previous" /></button><span data-screen-count>1 of 4</span><button type="button" data-screen-next><img src="assets/museum/arrow-next.svg" alt="Next" /></button></div></div>
-          <div class="screen-phone screen-phone--left"><img src="assets/museum/screen-home.png" alt="Georgian National Museum homepage, mobile version" /></div>
-          <div class="screen-phone screen-phone--right"><img src="assets/museum/screen-secondary.png" alt="Georgian National Museum menu, mobile version" /></div>
+          <div class="screens-heading">
+            <h2>Screens</h2>
+            <div class="device-tabs" aria-label="Screen format">
+              <button class="active" type="button" data-screen-mode="mobile">Mobile</button><span>/</span><button type="button" data-screen-mode="desktop">Desktop</button>
+            </div>
+          </div>
+          <div class="screens-carousel">
+            <button type="button" aria-label="Previous screens"><img src="assets/museum/process-prev.svg" alt="" /></button>
+            <div class="screens-track">
+              <img src="assets/museum/screen-mobile-1.png" alt="Georgian National Museum mobile home screen" />
+              <img src="assets/museum/screen-mobile-2.png" alt="Georgian National Museum mobile collection screen" />
+              <img src="assets/museum/screen-mobile-3.png" alt="Georgian National Museum mobile news screen" />
+            </div>
+            <button type="button" aria-label="Next screens"><img src="assets/museum/process-next.svg" alt="" /></button>
+          </div>
         </section>
       </article>
 

@@ -24,3 +24,9 @@ const processSteps = ['References', 'Structure', 'UI Design'];
 const updateProcess = () => { document.querySelector('[data-process-count]').textContent = `${processIndex + 1}/3 ${processSteps[processIndex]}`; };
 document.querySelector('[data-process-prev]')?.addEventListener('click', () => { processIndex = (processIndex + 2) % 3; updateProcess(); });
 document.querySelector('[data-process-next]')?.addEventListener('click', () => { processIndex = (processIndex + 1) % 3; updateProcess(); });
+
+document.querySelectorAll('[data-screen-mode]').forEach((button) => {
+  button.addEventListener('click', () => {
+    document.querySelectorAll('[data-screen-mode]').forEach((item) => item.classList.toggle('active', item === button));
+  });
+});
