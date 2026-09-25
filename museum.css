@@ -2,6 +2,9 @@
 .museum-page .portfolio-header { height: 210px; }
 .museum-page main { color: #000; }
 .case-shell { position: relative; width: 1384px; height: 3637px; margin: 0 auto; overflow: hidden; border: 1px solid #c0c0c0; background: #fff; }
+.case-shell::before, .case-shell::after { position: absolute; z-index: 1; width: 1px; background: #000; content: ""; }
+.case-shell::before { top: 86px; left: 49px; height: 151px; }
+.case-shell::after { top: 594px; left: 384px; height: 150px; }
 .case-back { position: absolute; top: 40px; left: 49px; color: #757575; font-size: 16px; text-transform: uppercase; }
 .case-shell h1 { position: absolute; top: 102px; left: 61px; width: 1272px; margin: 0; font-size: 48px; font-weight: 500; line-height: normal; letter-spacing: 3.84px; text-transform: uppercase; }
 .case-hero { position: absolute; top: 237px; left: 49px; display: flex; }
@@ -15,7 +18,7 @@
 .project-links { width: 335px; }
 .project-links a { display: flex; width: 219px; height: 40px; align-items: center; justify-content: space-between; border-bottom: 1px solid #000; padding: 8px; font-size: 14px; text-transform: lowercase; }
 .project-links a + a { margin-top: 16px; }
-.project-links img { width: 19px; height: 19px; }
+.project-links img { width: 13px; height: 14.16px; margin-right: 3px; transform: rotate(45deg); }
 .project-meta { display: flex; margin: 8px 0 0 11px; align-items: center; gap: 24px; color: #6b6b6b; font-size: 14px; line-height: 24px; white-space: nowrap; }
 .project-meta i { width: 23px; height: 23px; margin: -6px; background: url("assets/home-v2/meta-dot.svg") center/contain no-repeat; }
 .case-intro { position: absolute; top: 823px; left: 50%; width: 600px; margin: 0; transform: translateX(-50%); font-size: 20px; line-height: 28px; text-align: center; }
@@ -42,16 +45,19 @@
 .screens-copy p { margin: 0; font-size: 24px; }
 .screen-controls { display: flex; align-items: center; gap: 16px; font-size: 16px; }
 .screen-controls button img { width: 24px; height: 24px; }
+.screen-controls button:first-child img { transform: rotate(-90deg); }
+.screen-controls button:last-child img { transform: rotate(90deg); }
 .screen-phone { position: absolute; top: 114px; width: 468px; height: 628px; overflow: hidden; border: 1px solid #000; border-radius: 48px; background: #fff; }
 .screen-phone img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
 .screen-phone--left { left: 478px; }
 .screen-phone--left img { height: 1440px; }
 .screen-phone--right { left: 814px; border-radius: 48px 0 0 48px; }
-.next-project { display: flex; width: 1384px; height: 298px; margin: 0 auto; align-items: center; justify-content: center; border: 1px solid #c0c0c0; border-top: 0; background: #fff; font-size: 32px; font-weight: 500; letter-spacing: 2.56px; text-transform: uppercase; }
+.next-project { display: flex; width: 1384px; height: 298px; margin: 0 auto 80px; align-items: center; justify-content: center; border: 1px solid #c0c0c0; border-top: 0; background: #fff; font-size: 32px; font-weight: 500; letter-spacing: 2.56px; text-transform: uppercase; }
 
 @media (max-width:760px) {
   .museum-page .portfolio-header { height: 190px; }
   .case-shell { width: calc(100% - 24px); height: auto; padding: 28px 14px 80px; }
+  .case-shell::before, .case-shell::after { display: none; }
   .case-back, .case-shell h1, .case-hero, .case-details, .case-intro, .showcase-grid, .problem-section, .process-section, .screens-section { position: static; transform: none; }
   .case-back { display: block; margin-bottom: 48px; }
   .case-shell h1 { width: auto; margin-bottom: 36px; font-size: 28px; letter-spacing: 2px; }
