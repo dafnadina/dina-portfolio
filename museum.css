@@ -69,12 +69,11 @@
 .desktop-screens-stage { position: relative; display: none; width: 1016px; height: 1133px; }
 .screens-section.show-desktop .screens-track { display: none; }
 .screens-section.show-desktop .desktop-screens-stage { display: block; }
-.screens-section.show-desktop .screens-carousel > button { display: none; }
 .desktop-screen-card { position: absolute; border: 1px solid #000; border-radius: 10px; padding: 14px; background: #fff; }
 .desktop-screen-card > div { width: 100%; height: 100%; overflow: hidden; border: 1px solid #000; }
 .desktop-screen-card img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
-.desktop-screen-card--science { top: 78px; left: 0; width: 450px; height: 666px; }
-.desktop-screen-card--collection { z-index: 1; top: 0; left: 280px; width: 450px; height: 1121px; }
+.desktop-screen-card--science { top: 84px; left: 143px; width: 450px; height: 666px; }
+.desktop-screen-card--collection { z-index: 1; top: 6px; left: 423px; width: 450px; height: 1121px; }
 .next-project { position: relative; display: flex; width: 1384px; height: 298px; margin: 0 auto 120px; align-items: center; justify-content: center; border: 1px solid #c0c0c0; border-top: 0; background: #fff; font-size: 32px; font-weight: 500; letter-spacing: 2.56px; text-transform: uppercase; }
 .next-project { transition: color .2s ease, border-color .2s ease; }
 .next-project:hover, .next-project:focus-visible { border-color: #0637ff; color: #0637ff; outline: none; }
