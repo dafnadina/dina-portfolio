@@ -37,5 +37,13 @@ document.querySelector('[data-process-next]')?.addEventListener('click', () => {
 document.querySelectorAll('[data-screen-mode]').forEach((button) => {
   button.addEventListener('click', () => {
     document.querySelectorAll('[data-screen-mode]').forEach((item) => item.classList.toggle('active', item === button));
+    const showDesktop = button.dataset.screenMode === 'desktop';
+    document.querySelector('[data-mobile-screens]').hidden = showDesktop;
+    document.querySelector('[data-desktop-screens]').hidden = !showDesktop;
+    document.querySelectorAll('[data-screen-prev], [data-screen-next]').forEach((control) => {
+      control.disabled = showDesktop;
+      control.hidden = showDesktop;
+      control.setAttribute('aria-hidden', String(showDesktop));
+    });
   });
 });

@@ -59,11 +59,18 @@
 .screens-carousel > button:hover, .screens-carousel > button:focus-visible { outline: none; }
 .screens-carousel > button:hover img, .screens-carousel > button:focus-visible img { filter: invert(19%) sepia(100%) saturate(5449%) hue-rotate(232deg) brightness(97%) contrast(113%); }
 .screens-carousel > button img { width: 42px; height: 42px; transition: filter .2s ease; }
+.gnm-page .screens-content { position: relative; width: 1016px; height: 1133px; overflow: hidden; }
 .screens-track { display: flex; gap: 28px; }
-.gnm-page .screens-track { display: block; width: 1016px; overflow: hidden; }
+.gnm-page .screens-track { display: block; width: 100%; overflow: hidden; }
 .gnm-page .screens-page { display: none; gap: 28px; }
 .gnm-page .screens-page.active { display: flex; }
 .screens-track img { width: 320px; height: 1133px; object-fit: cover; }
+.desktop-screens-stage { position: relative; width: 1016px; height: 1133px; }
+.desktop-screen-card { position: absolute; border: 1px solid #000; border-radius: 10px; padding: 14px; background: #fff; }
+.desktop-screen-card > div { width: 100%; height: 100%; overflow: hidden; border: 1px solid #000; }
+.desktop-screen-card img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.desktop-screen-card--science { top: 78px; left: 0; width: 450px; height: 666px; }
+.desktop-screen-card--collection { z-index: 1; top: 0; left: 280px; width: 450px; height: 1121px; }
 .next-project { position: relative; display: flex; width: 1384px; height: 298px; margin: 0 auto 120px; align-items: center; justify-content: center; border: 1px solid #c0c0c0; border-top: 0; background: #fff; font-size: 32px; font-weight: 500; letter-spacing: 2.56px; text-transform: uppercase; }
 .next-project { transition: color .2s ease, border-color .2s ease; }
 .next-project:hover, .next-project:focus-visible { border-color: #0637ff; color: #0637ff; outline: none; }
@@ -125,8 +132,9 @@
   .screens-carousel { gap: 10px; overflow: hidden; }
   .screens-carousel > button { width: 28px; height: 28px; flex-basis: 28px; }
   .screens-carousel > button img { width: 28px; height: 28px; }
+  .gnm-page .screens-content { width: calc(100% - 76px); overflow-x: auto; }
   .screens-track { width: calc(100% - 76px); gap: 12px; overflow-x: auto; }
-  .gnm-page .screens-track { width: calc(100% - 76px); }
+  .gnm-page .screens-track { width: 1016px; }
   .gnm-page .screens-page { gap: 12px; }
   .screens-track img { width: 78vw; height: auto; flex: 0 0 78vw; }
   .next-project { width: calc(100% - 24px); height: 180px; font-size: 24px; }
