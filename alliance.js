@@ -42,11 +42,3 @@ document.querySelector('[data-process-next]')?.addEventListener('click', () => {
   allianceProcessIndex = (allianceProcessIndex + 1) % allianceProcess.length;
   renderAllianceProcess();
 });
-
-const allianceScreensTrack = document.querySelector('.screens-track');
-document.querySelector('[data-screen-prev]')?.addEventListener('click', () => {
-  allianceScreensTrack?.prepend(allianceScreensTrack.lastElementChild);
-});
-document.querySelector('[data-screen-next]')?.addEventListener('click', () => {
-  allianceScreensTrack?.append(allianceScreensTrack.firstElementChild);
-});
