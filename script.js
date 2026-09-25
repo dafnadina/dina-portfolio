@@ -1,6 +1,7 @@
 const themeButton = document.querySelector('.theme-switch');
 const identity = document.querySelector('.identity');
 const introStorageKey = 'dina-portfolio-intro-seen';
+const themeStorageKey = 'dina-portfolio-theme';
 
 const hasSeenIntro = () => {
   try { return sessionStorage.getItem(introStorageKey) === 'true'; } catch { return false; }
@@ -28,7 +29,15 @@ if (document.body.classList.contains('intro-running') && hasSeenIntro()) {
 
 identity?.addEventListener('click', rememberIntro);
 
-themeButton?.addEventListener('click', () => {
-  const isDark = document.body.classList.toggle('dark-theme');
+const renderThemeButton = () => {
+  const isDark = document.documentElement.classList.contains('dark-theme');
   themeButton.innerHTML = isDark ? '<span>Light / </span><strong>Dark</strong>' : '<strong>Light</strong><span> / Dark</span>';
+};
+
+if (themeButton) renderThemeButton();
+
+themeButton?.addEventListener('click', () => {
+  const isDark = document.documentElement.classList.toggle('dark-theme');
+  try { localStorage.setItem(themeStorageKey, isDark ? 'dark' : 'light'); } catch { /* Keep the theme for the current page. */ }
+  renderThemeButton();
 });
