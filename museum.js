@@ -44,10 +44,11 @@ const processSteps = [
     contain: true
   },
   {
-    name: 'UI Design',
-    copy: 'The final interface system brings the museum network together through consistent navigation, typography and reusable layouts across desktop and mobile screens',
-    image: 'assets/museum/screen-home.png',
-    alt: 'Final Georgian National Museum interface design'
+    name: 'Interactive Prototype',
+    copy: 'An interactive prototype was created to test navigation, user flows and the connections between desktop and mobile screens before the final handoff',
+    image: 'assets/museum/process-interactive-prototype.png',
+    alt: 'Interactive prototype connections between Georgian National Museum screens',
+    contain: true
   }
 ];
 const updateProcess = () => {
