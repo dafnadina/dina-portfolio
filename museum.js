@@ -46,7 +46,7 @@ const processSteps = [
   {
     name: 'Interactive Prototype',
     copy: 'An interactive prototype was created to test navigation, user flows and the connections between desktop and mobile screens before the final handoff',
-    image: 'assets/museum/process-interactive-prototype.png',
+    image: 'assets/museum/process-interactive-prototype-v2.png',
     alt: 'Interactive prototype connections between Georgian National Museum screens',
     contain: true
   }
