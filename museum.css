@@ -1,5 +1,5 @@
 .museum-page { background: #f5f5f5; }
-.museum-page .portfolio-header { height: 210px; }
+.museum-page .portfolio-header { height: 239px; }
 .museum-page main { color: #000; }
 .case-shell { position: relative; width: 1384px; height: 3637px; margin: 0 auto; overflow: hidden; border: 1px solid #c0c0c0; background: #fff; }
 .case-shell::before, .case-shell::after { position: absolute; z-index: 1; width: 1px; background: #000; content: ""; }
@@ -52,7 +52,7 @@
 .screen-phone--left { left: 478px; }
 .screen-phone--left img { height: 1440px; }
 .screen-phone--right { left: 814px; border-radius: 48px 0 0 48px; }
-.next-project { display: flex; width: 1384px; height: 298px; margin: 0 auto 80px; align-items: center; justify-content: center; border: 1px solid #c0c0c0; border-top: 0; background: #fff; font-size: 32px; font-weight: 500; letter-spacing: 2.56px; text-transform: uppercase; }
+.next-project { display: flex; width: 1384px; height: 298px; margin: 0 auto 120px; align-items: center; justify-content: center; border: 1px solid #c0c0c0; border-top: 0; background: #fff; font-size: 32px; font-weight: 500; letter-spacing: 2.56px; text-transform: uppercase; }
 
 @media (max-width:760px) {
   .museum-page .portfolio-header { height: 190px; }
