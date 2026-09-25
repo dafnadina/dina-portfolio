@@ -39,14 +39,14 @@ const processSteps = [
   {
     name: 'Redlines',
     copy: 'Alongside desktop and mobile layouts, a redline version was created for every screen to document the grid, spacing, dimensions and alignment for development',
-    image: 'assets/museum/process-redlines.png',
+    image: 'assets/museum/process-interactive-prototype-v2.png',
     alt: 'Redline versions of the Georgian National Museum desktop screens',
     contain: true
   },
   {
     name: 'Interactive Prototype',
     copy: 'An interactive prototype was created to test navigation, user flows and the connections between desktop and mobile screens before the final handoff',
-    image: 'assets/museum/process-interactive-prototype-v2.png',
+    image: 'assets/museum/process-interactive-prototype.png',
     alt: 'Interactive prototype connections between Georgian National Museum screens',
     contain: true
   }
