@@ -29,8 +29,36 @@ document.querySelector('[data-screen-next]')?.addEventListener('click', () => {
 });
 
 let processIndex = 0;
-const processSteps = ['References', 'Structure', 'UI Design'];
-const updateProcess = () => { document.querySelector('[data-process-count]').textContent = `${processIndex + 1}/3 ${processSteps[processIndex]}`; };
+const processSteps = [
+  {
+    name: 'References',
+    copy: 'I explored museum websites, collecting and organising visual references to inform the layout, typography and interaction patterns of the new interface. This helped me explore different design approaches and establish a visual direction for the project',
+    image: 'assets/museum/process.png',
+    alt: 'A collection of museum website references'
+  },
+  {
+    name: 'Redlines',
+    copy: 'Alongside desktop and mobile layouts, a redline version was created for every screen to document the grid, spacing, dimensions and alignment for development',
+    image: 'assets/museum/process-redlines.png',
+    alt: 'Redline versions of the Georgian National Museum desktop screens',
+    contain: true
+  },
+  {
+    name: 'UI Design',
+    copy: 'The final interface system brings the museum network together through consistent navigation, typography and reusable layouts across desktop and mobile screens',
+    image: 'assets/museum/screen-home.png',
+    alt: 'Final Georgian National Museum interface design'
+  }
+];
+const updateProcess = () => {
+  const step = processSteps[processIndex];
+  const image = document.querySelector('[data-process-image]');
+  document.querySelector('[data-process-count]').textContent = `${processIndex + 1}/3 ${step.name}`;
+  document.querySelector('[data-process-copy]').textContent = step.copy;
+  image.src = step.image;
+  image.alt = step.alt;
+  image.classList.toggle('is-contain', Boolean(step.contain));
+};
 document.querySelector('[data-process-prev]')?.addEventListener('click', () => { processIndex = (processIndex + 2) % 3; updateProcess(); });
 document.querySelector('[data-process-next]')?.addEventListener('click', () => { processIndex = (processIndex + 1) % 3; updateProcess(); });
 
