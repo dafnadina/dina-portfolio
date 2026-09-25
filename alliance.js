@@ -43,12 +43,6 @@ document.querySelector('[data-process-next]')?.addEventListener('click', () => {
   renderAllianceProcess();
 });
 
-document.querySelectorAll('[data-screen-mode]').forEach((button) => {
-  button.addEventListener('click', () => {
-    document.querySelectorAll('[data-screen-mode]').forEach((item) => item.classList.toggle('active', item === button));
-  });
-});
-
 const allianceScreensTrack = document.querySelector('.screens-track');
 document.querySelector('[data-screen-prev]')?.addEventListener('click', () => {
   allianceScreensTrack?.prepend(allianceScreensTrack.lastElementChild);
