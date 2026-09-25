@@ -20,8 +20,9 @@
 .project-links a { display: flex; width: 219px; height: 40px; align-items: center; justify-content: space-between; border-bottom: 1px solid #000; padding: 8px; font-size: 14px; text-transform: lowercase; }
 .project-links a { transition: color .2s ease, border-color .2s ease; }
 .project-links a:hover, .project-links a:focus-visible { border-color: #0637ff; color: #0637ff; outline: none; }
+.project-links a:hover img, .project-links a:focus-visible img { filter: invert(19%) sepia(100%) saturate(5449%) hue-rotate(232deg) brightness(97%) contrast(113%); }
 .project-links a + a { margin-top: 16px; }
-.project-links img { width: 13px; height: 14.16px; margin-right: 3px; transform: rotate(45deg); }
+.project-links img { width: 13px; height: 14.16px; margin-right: 3px; transform: rotate(45deg); transition: filter .2s ease; }
 .project-meta { display: flex; margin: 8px 0 0 11px; align-items: center; gap: 24px; color: #6b6b6b; font-size: 14px; line-height: 24px; white-space: nowrap; }
 .project-meta i { width: 23px; height: 23px; margin: -6px; background: url("assets/home-v2/meta-dot.svg") center/contain no-repeat; }
 .case-intro { position: absolute; top: 833px; left: 50%; width: 600px; margin: 0; transform: translateX(-50%); font-size: 20px; line-height: 28px; text-align: center; }
@@ -38,9 +39,10 @@
 .process-section h2 { margin: 0; font-size: 36px; font-weight: 400; text-transform: uppercase; }
 .process-carousel { display: flex; width: 961px; margin: 58px auto 0; align-items: center; justify-content: space-between; }
 .process-carousel button, .screen-controls button { border: 0; padding: 0; background: none; cursor: pointer; }
-.process-carousel button { border-radius: 50%; transition: background-color .2s ease; }
-.process-carousel button:hover, .process-carousel button:focus-visible { background: #0637ff; outline: none; }
-.process-carousel button img { width: 42px; height: 42px; }
+.process-carousel button { border-radius: 0; }
+.process-carousel button:hover, .process-carousel button:focus-visible { outline: none; }
+.process-carousel button:hover img, .process-carousel button:focus-visible img { filter: invert(19%) sepia(100%) saturate(5449%) hue-rotate(232deg) brightness(97%) contrast(113%); }
+.process-carousel button img { width: 42px; height: 42px; transition: filter .2s ease; }
 .process-image { width: 717px; height: 371px; overflow: hidden; border: 1px solid #000; border-radius: 48px; }
 .process-image img { width: 100%; height: 100%; object-fit: cover; }
 .process-section h3 { margin: 24px 0 0; font-size: 16px; font-weight: 600; letter-spacing: 1.28px; text-align: center; }
@@ -52,15 +54,18 @@
 .device-tabs button { border: 1px solid transparent; border-radius: 48px; padding: 8px 20px; background: none; font: 400 24px "Kode Mono",monospace; text-transform: uppercase; cursor: pointer; transition: color .2s ease, border-color .2s ease; }
 .device-tabs button.active { border-color: #000; }
 .device-tabs button:hover, .device-tabs button:focus-visible { border-color: #0637ff; color: #0637ff; outline: none; }
-.screens-carousel { position: absolute; top: 218px; left: 50%; display: flex; transform: translateX(-50%); align-items: center; gap: 28px; }
-.screens-carousel > button { width: 42px; height: 42px; flex: 0 0 42px; border: 0; border-radius: 50%; padding: 0; background: none; cursor: pointer; transition: background-color .2s ease; }
-.screens-carousel > button:hover, .screens-carousel > button:focus-visible { background: #0637ff; outline: none; }
-.screens-carousel > button img { width: 42px; height: 42px; }
+.screens-carousel { position: absolute; top: 218px; left: 50%; display: flex; transform: translateX(-50%); align-items: center; gap: 80px; }
+.screens-carousel > button { width: 42px; height: 42px; flex: 0 0 42px; border: 0; padding: 0; background: none; cursor: pointer; }
+.screens-carousel > button:hover, .screens-carousel > button:focus-visible { outline: none; }
+.screens-carousel > button:hover img, .screens-carousel > button:focus-visible img { filter: invert(19%) sepia(100%) saturate(5449%) hue-rotate(232deg) brightness(97%) contrast(113%); }
+.screens-carousel > button img { width: 42px; height: 42px; transition: filter .2s ease; }
 .screens-track { display: flex; gap: 28px; }
 .screens-track img { width: 320px; height: 1133px; object-fit: cover; }
-.next-project { display: flex; width: 1384px; height: 298px; margin: 0 auto 120px; align-items: center; justify-content: center; border: 1px solid #c0c0c0; border-top: 0; background: #fff; font-size: 32px; font-weight: 500; letter-spacing: 2.56px; text-transform: uppercase; }
+.next-project { position: relative; display: flex; width: 1384px; height: 298px; margin: 0 auto 120px; align-items: center; justify-content: center; border: 1px solid #c0c0c0; border-top: 0; background: #fff; font-size: 32px; font-weight: 500; letter-spacing: 2.56px; text-transform: uppercase; }
 .next-project { transition: color .2s ease, border-color .2s ease; }
 .next-project:hover, .next-project:focus-visible { border-color: #0637ff; color: #0637ff; outline: none; }
+.next-project::before { position: absolute; top: 0; right: 0; left: 0; height: 1px; background: transparent; content: ""; transition: background-color .2s ease; }
+.next-project:hover::before, .next-project:focus-visible::before, .next-project:active::before { background: #0637ff; }
 
 @media (max-width:760px) {
   .museum-page .portfolio-header { height: 190px; }
