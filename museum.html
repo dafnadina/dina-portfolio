@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="museum.css" />
   </head>
-  <body class="museum-page">
+  <body class="museum-page gnm-page">
     <header class="portfolio-header">
       <a class="identity" href="index.html"><span>Dina Radosavlevich</span><span class="identity-dot" aria-hidden="true"></span><span>Product Designer</span></a>
       <nav aria-label="Primary navigation"><a href="index.html">Works</a><a href="about.html">About me</a><a href="resume.pdf">Resume</a></nav>
@@ -81,13 +81,20 @@
             </div>
           </div>
           <div class="screens-carousel">
-            <button type="button" aria-label="Previous screens"><img src="assets/museum/process-prev.svg" alt="" /></button>
+            <button type="button" aria-label="Previous screens page" data-screen-prev><img src="assets/museum/process-prev.svg" alt="" /></button>
             <div class="screens-track">
-              <img src="assets/museum/screen-mobile-156-original.png" alt="Georgian National Museum mobile home screen" />
-              <img src="assets/museum/screen-mobile-157-original.png" alt="Georgian National Museum mobile collection screen" />
-              <img src="assets/museum/screen-mobile-158-original.png" alt="Georgian National Museum mobile news screen" />
+              <div class="screens-page active" data-screens-page>
+                <img src="assets/museum/screen-mobile-156-original.png" alt="Georgian National Museum mobile home screen" />
+                <img src="assets/museum/screen-mobile-157-original.png" alt="Georgian National Museum mobile collection screen" />
+                <img src="assets/museum/screen-mobile-158-original.png" alt="Georgian National Museum mobile news screen" />
+              </div>
+              <div class="screens-page" data-screens-page hidden>
+                <img src="assets/museum/screen-mobile-page2-1.png" alt="Georgian National Museum museums screen" />
+                <img src="assets/museum/screen-mobile-page2-2.png" alt="Simon Janashia Museum of Georgia screen" />
+                <img src="assets/museum/screen-mobile-page2-3.png" alt="Georgian National Museum education screen" />
+              </div>
             </div>
-            <button type="button" aria-label="Next screens"><img src="assets/museum/process-next.svg" alt="" /></button>
+            <button type="button" aria-label="Next screens page" data-screen-next><img src="assets/museum/process-next.svg" alt="" /></button>
           </div>
         </section>
       </article>

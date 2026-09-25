@@ -10,14 +10,23 @@ document.querySelectorAll('[data-case-tab]').forEach((button) => {
   });
 });
 
-const screenNames = ['#1 Home', '#2 Museums', '#3 Collection', '#4 Visit'];
-let screenIndex = 0;
-const updateScreen = () => {
-  document.querySelector('[data-screen-name]').textContent = screenNames[screenIndex];
-  document.querySelector('[data-screen-count]').textContent = `${screenIndex + 1} of ${screenNames.length}`;
+const screensPages = [...document.querySelectorAll('[data-screens-page]')];
+let screensPageIndex = 0;
+const updateScreensPage = () => {
+  screensPages.forEach((page, index) => {
+    const isActive = index === screensPageIndex;
+    page.classList.toggle('active', isActive);
+    page.hidden = !isActive;
+  });
 };
-document.querySelector('[data-screen-prev]')?.addEventListener('click', () => { screenIndex = (screenIndex - 1 + screenNames.length) % screenNames.length; updateScreen(); });
-document.querySelector('[data-screen-next]')?.addEventListener('click', () => { screenIndex = (screenIndex + 1) % screenNames.length; updateScreen(); });
+document.querySelector('[data-screen-prev]')?.addEventListener('click', () => {
+  screensPageIndex = (screensPageIndex - 1 + screensPages.length) % screensPages.length;
+  updateScreensPage();
+});
+document.querySelector('[data-screen-next]')?.addEventListener('click', () => {
+  screensPageIndex = (screensPageIndex + 1) % screensPages.length;
+  updateScreensPage();
+});
 
 let processIndex = 0;
 const processSteps = ['References', 'Structure', 'UI Design'];

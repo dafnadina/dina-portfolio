@@ -60,6 +60,9 @@
 .screens-carousel > button:hover img, .screens-carousel > button:focus-visible img { filter: invert(19%) sepia(100%) saturate(5449%) hue-rotate(232deg) brightness(97%) contrast(113%); }
 .screens-carousel > button img { width: 42px; height: 42px; transition: filter .2s ease; }
 .screens-track { display: flex; gap: 28px; }
+.gnm-page .screens-track { display: block; width: 1016px; overflow: hidden; }
+.gnm-page .screens-page { display: none; gap: 28px; }
+.gnm-page .screens-page.active { display: flex; }
 .screens-track img { width: 320px; height: 1133px; object-fit: cover; }
 .next-project { position: relative; display: flex; width: 1384px; height: 298px; margin: 0 auto 120px; align-items: center; justify-content: center; border: 1px solid #c0c0c0; border-top: 0; background: #fff; font-size: 32px; font-weight: 500; letter-spacing: 2.56px; text-transform: uppercase; }
 .next-project { transition: color .2s ease, border-color .2s ease; }
@@ -123,6 +126,8 @@
   .screens-carousel > button { width: 28px; height: 28px; flex-basis: 28px; }
   .screens-carousel > button img { width: 28px; height: 28px; }
   .screens-track { width: calc(100% - 76px); gap: 12px; overflow-x: auto; }
+  .gnm-page .screens-track { width: calc(100% - 76px); }
+  .gnm-page .screens-page { gap: 12px; }
   .screens-track img { width: 78vw; height: auto; flex: 0 0 78vw; }
   .next-project { width: calc(100% - 24px); height: 180px; font-size: 24px; }
 }
