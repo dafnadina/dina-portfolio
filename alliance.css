@@ -3,6 +3,7 @@
 .alliance-page .showcase-grid img { object-position: center; }
 .alliance-page .showcase-grid img:first-child { object-position: 48% center; }
 .alliance-page .process-image img { object-position: top center; }
+.alliance-page .process-image img.is-contain { object-position: center; background: #f5f1e9; }
 .alliance-page .screens-carousel { top: 152px; }
 .alliance-page .screens-content { position: relative; width: 1016px; height: 1133px; overflow: hidden; }
 .alliance-page .desktop-screens-stage { display: block; width: 1016px; height: 1133px; }
