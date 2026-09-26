@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <script src="theme-init.js"></script>
     <link rel="preload" as="image" href="assets/home-v2/dh-alliance-original.png" />
-    <link rel="preload" as="image" href="assets/project/dh-screen.png" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="museum.css" />
     <link rel="stylesheet" href="alliance.css" />
@@ -46,9 +45,9 @@
         <p class="case-intro">DH Alliance is a platform for discovering digital humanities projects, job opportunities and tools.<br />It helps students and early-career researchers find relevant initiatives,<br />connect with specialists and navigate a fragmented professional field</p>
 
         <section class="showcase-grid" aria-label="DH Alliance project mockups">
-          <img src="assets/home-v2/dh-alliance-original.png" alt="DH Alliance website on a laptop" />
-          <img src="assets/project-dh-1.png" alt="DH Alliance interface overview" />
+          <img src="assets/project-dh-3.png" alt="DH Alliance website on a laptop" />
           <img src="assets/project-dh-2.png" alt="DH Alliance project interface" />
+          <img src="assets/project-dh-1.png" alt="DH Alliance interface overview" />
         </section>
 
         <section class="problem-section">
@@ -64,11 +63,11 @@
           <h2>Design Process</h2>
           <div class="process-carousel">
             <button type="button" aria-label="Previous process step" data-process-prev><img src="assets/museum/process-prev.svg" alt="" /></button>
-            <div class="process-image"><img data-process-image src="assets/project-dh-1.png" alt="DH Alliance research and interface references" /></div>
+            <div class="process-image"><img class="is-contain" data-process-image src="assets/project-dh-process/01-context.png" alt="DH Alliance design process: context slide" /></div>
             <button type="button" aria-label="Next process step" data-process-next><img src="assets/museum/process-next.svg" alt="" /></button>
           </div>
-          <h3 data-process-count>1/3 Research</h3>
-          <p data-process-copy>Surveys, in-depth interviews and UX testing with 46 participants helped uncover user needs, workflows and the barriers people face when looking for digital humanities opportunities</p>
+          <h3 data-process-count>1/8 Context</h3>
+          <p data-process-copy>Digital humanities projects, from digital archives and virtual museums to text-based visualizations and interactive historical maps, preserve cultural heritage, yet they are hard to find online</p>
         </section>
 
         <section class="screens-section">
@@ -76,13 +75,16 @@
             <h2>Screens</h2>
           </div>
           <div class="screens-carousel">
-            <button type="button" aria-label="Previous screens" data-screen-prev><img src="assets/museum/process-prev.svg" alt="" /></button>
-            <div class="screens-track">
-              <img src="assets/project/dh-screen.png" alt="DH Alliance home screen" />
-              <img src="assets/project-dh-1.png" alt="DH Alliance discovery screen" />
-              <img src="assets/project-dh-2.png" alt="DH Alliance project screen" />
+            <div class="screens-content">
+              <div class="desktop-screens-stage">
+                <div class="desktop-screen-card desktop-screen-card--about">
+                  <div><img src="assets/project-dh-screen-about.png" alt="DH Alliance about screen" /></div>
+                </div>
+                <div class="desktop-screen-card desktop-screen-card--project">
+                  <div><img src="assets/project-dh-screen-project.png" alt="DH Alliance project screen" /></div>
+                </div>
+              </div>
             </div>
-            <button type="button" aria-label="Next screens" data-screen-next><img src="assets/museum/process-next.svg" alt="" /></button>
           </div>
         </section>
       </article>

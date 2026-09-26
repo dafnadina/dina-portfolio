@@ -3,9 +3,16 @@
 .alliance-page .showcase-grid img { object-position: center; }
 .alliance-page .showcase-grid img:first-child { object-position: 48% center; }
 .alliance-page .process-image img { object-position: top center; }
+.alliance-page .process-image img.is-contain { object-position: center; background: #f5f1e9; }
 .alliance-page .screens-carousel { top: 152px; }
-.alliance-page .screens-track img { object-position: top center; }
+.alliance-page .screens-content { position: relative; width: 1016px; height: 1133px; overflow: hidden; }
+.alliance-page .desktop-screens-stage { display: block; width: 1016px; height: 1133px; }
+.alliance-page .desktop-screen-card--about { top: 84px; left: 143px; width: 450px; height: 666px; }
+.alliance-page .desktop-screen-card--project { z-index: 1; top: 6px; left: 423px; width: 450px; height: 1121px; }
 
 @media (max-width:760px) {
   .alliance-page .hero-animation-frame iframe { display: none; }
+  .alliance-page .screens-content { width: 100%; height: auto; overflow: visible; }
+  .alliance-page .desktop-screens-stage { position: static; width: 100%; height: auto; display: flex; flex-direction: column; gap: 16px; }
+  .alliance-page .desktop-screen-card { position: static; width: 100%; height: 64vw; max-height: 420px; }
 }
