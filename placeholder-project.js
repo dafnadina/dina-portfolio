@@ -7,7 +7,7 @@ document.querySelectorAll('[data-placeholder-link]').forEach((link) => {
 document.querySelectorAll('[data-case-tab]').forEach((button) => {
   button.addEventListener('click', () => {
     document.querySelectorAll('[data-case-tab]').forEach((item) => item.classList.toggle('active', item === button));
-    document.querySelector('[data-case-copy]').textContent = placeholderText;
+    document.querySelector('[data-case-copy]').textContent = button.dataset.caseText || placeholderText;
   });
 });
 
