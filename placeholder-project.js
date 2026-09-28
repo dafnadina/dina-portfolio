@@ -26,9 +26,28 @@ document.querySelector('[data-process-next]')?.addEventListener('click', () => {
 });
 
 const placeholderScreensTrack = document.querySelector('.screens-track');
+const placeholderScreenPages = [...document.querySelectorAll('[data-screens-page]')];
+let placeholderScreenPageIndex = 0;
+const renderPlaceholderScreenPage = () => {
+  placeholderScreenPages.forEach((page, index) => {
+    const isActive = index === placeholderScreenPageIndex;
+    page.classList.toggle('active', isActive);
+    page.hidden = !isActive;
+  });
+};
 document.querySelector('[data-screen-prev]')?.addEventListener('click', () => {
-  placeholderScreensTrack?.prepend(placeholderScreensTrack.lastElementChild);
+  if (placeholderScreenPages.length) {
+    placeholderScreenPageIndex = (placeholderScreenPageIndex - 1 + placeholderScreenPages.length) % placeholderScreenPages.length;
+    renderPlaceholderScreenPage();
+  } else {
+    placeholderScreensTrack?.prepend(placeholderScreensTrack.lastElementChild);
+  }
 });
 document.querySelector('[data-screen-next]')?.addEventListener('click', () => {
-  placeholderScreensTrack?.append(placeholderScreensTrack.firstElementChild);
+  if (placeholderScreenPages.length) {
+    placeholderScreenPageIndex = (placeholderScreenPageIndex + 1) % placeholderScreenPages.length;
+    renderPlaceholderScreenPage();
+  } else {
+    placeholderScreensTrack?.append(placeholderScreensTrack.firstElementChild);
+  }
 });

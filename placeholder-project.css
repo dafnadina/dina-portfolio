@@ -5,12 +5,10 @@
 .placeholder-project-page .process-image.placeholder-media { border-color: #000; }
 .placeholder-project-page .screens-carousel { top: 152px; }
 .placeholder-project-page .screens-track .placeholder-media { width: 320px; height: 1133px; flex: 0 0 320px; }
-.fragrantica-page .screens-carousel { width: 1284px; justify-content: center; gap: 0; }
-.fragrantica-page .screens-carousel > button { position: absolute; z-index: 2; top: 50%; transform: translateY(-50%); }
-.fragrantica-page .screens-carousel > button:first-child { left: 0; }
-.fragrantica-page .screens-carousel > button:last-child { right: 0; }
-.fragrantica-page .screens-track { align-items: flex-start; gap: 0; }
-.fragrantica-page .screens-track img { width: 428px; height: auto; flex: 0 0 428px; object-fit: initial; }
+.fragrantica-page .screens-track { display: block; width: 1016px; overflow: hidden; }
+.fragrantica-page .screens-page { display: none; align-items: flex-start; gap: 28px; }
+.fragrantica-page .screens-page.active { display: flex; }
+.fragrantica-page .screens-track img { width: 320px; height: auto; flex: 0 0 320px; object-fit: initial; }
 .dark-theme .placeholder-project-page .placeholder-media { background: #505050; }
 .dark-theme .placeholder-project-page .hero-small .placeholder-media,
 .dark-theme .placeholder-project-page .hero-animation-frame,
@@ -20,13 +18,12 @@
   .placeholder-project-page .hero-small .placeholder-media { height: min(84vw, 335px); }
   .placeholder-project-page .showcase-grid .placeholder-media { width: 100%; height: 110vw; max-height: 528px; }
   .placeholder-project-page .screens-track .placeholder-media { width: 78vw; height: 150vw; flex-basis: 78vw; }
-  .fragrantica-page .screens-carousel { width: 100%; justify-content: initial; gap: 10px; }
-  .fragrantica-page .screens-carousel > button { position: static; transform: none; }
-  .fragrantica-page .screens-track { gap: 12px; }
+  .fragrantica-page .screens-track { width: calc(100% - 76px); }
+  .fragrantica-page .screens-page { gap: 12px; }
   .fragrantica-page .screens-track img { width: 78vw; height: auto; flex-basis: 78vw; }
 }
 
 @media (min-width:761px) {
-  .fragrantica-page .case-shell { height: 5990px; }
-  .fragrantica-page .screens-section { height: 3225px; }
+  .fragrantica-page .case-shell { height: 5235px; }
+  .fragrantica-page .screens-section { height: 2470px; }
 }

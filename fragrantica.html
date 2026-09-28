@@ -11,7 +11,7 @@
     <script src="theme-init.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="museum.css" />
-    <link rel="stylesheet" href="placeholder-project.css?v=20260928-3" />
+    <link rel="stylesheet" href="placeholder-project.css?v=20260928-4" />
   </head>
   <body class="museum-page placeholder-project-page fragrantica-page">
     <header class="portfolio-header">
@@ -72,9 +72,16 @@
           <div class="screens-carousel">
             <button type="button" aria-label="Previous screens" data-screen-prev><img src="assets/museum/process-prev.svg" alt="" /></button>
             <div class="screens-track">
-              <img src="assets/fragrantica/screen-card.jpg" alt="Fragrantica fragrance details mobile screen" />
-              <img src="assets/fragrantica/screen-home.jpg" alt="Fragrantica home mobile screen" />
-              <img src="assets/fragrantica/screen-camera.jpg" alt="Fragrantica barcode scanner mobile screen" />
+              <div class="screens-page active" data-screens-page>
+                <img src="assets/fragrantica/screen-card.jpg" alt="Fragrantica fragrance details mobile screen" />
+                <img src="assets/fragrantica/screen-home.jpg" alt="Fragrantica home mobile screen" />
+                <img src="assets/fragrantica/screen-filter.jpg" alt="Fragrantica filters mobile screen" />
+              </div>
+              <div class="screens-page" data-screens-page hidden>
+                <img src="assets/fragrantica/screen-camera.jpg" alt="Fragrantica barcode scanner mobile screen" />
+                <img src="assets/fragrantica/screen-list.jpg" alt="Fragrantica search results mobile screen" />
+                <img src="assets/fragrantica/screen-filtered-result.jpg" alt="Fragrantica filtered search result mobile screen" />
+              </div>
             </div>
             <button type="button" aria-label="Next screens" data-screen-next><img src="assets/museum/process-next.svg" alt="" /></button>
           </div>
@@ -89,6 +96,6 @@
       <button class="theme-switch" type="button" aria-label="Switch color theme"><strong>Light</strong><span> / Dark</span></button>
     </footer>
     <script src="script.js"></script>
-    <script src="placeholder-project.js?v=20260928-1"></script>
+    <script src="placeholder-project.js?v=20260928-2"></script>
   </body>
 </html>
