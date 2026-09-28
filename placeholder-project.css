@@ -5,6 +5,7 @@
 .placeholder-project-page .process-image.placeholder-media { border-color: #000; }
 .placeholder-project-page .screens-carousel { top: 152px; }
 .placeholder-project-page .screens-track .placeholder-media { width: 320px; height: 1133px; flex: 0 0 320px; }
+.fragrantica-page .screens-track img { object-fit: contain; }
 .dark-theme .placeholder-project-page .placeholder-media { background: #505050; }
 .dark-theme .placeholder-project-page .hero-small .placeholder-media,
 .dark-theme .placeholder-project-page .hero-animation-frame,
