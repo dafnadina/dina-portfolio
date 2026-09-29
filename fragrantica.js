@@ -18,10 +18,16 @@ const fragranticaProcessSteps = [
     alt: 'Usability testing results for four tasks in the existing Fragrantica interface'
   },
   {
-    name: 'Personas',
-    copy: 'I translated the research into three personas with different levels of fragrance knowledge and distinct shopping habits. Their goals and pain points shaped scenarios for faster search, clearer product information, relevant alternatives and guided fragrance discovery.',
-    image: 'assets/fragrantica/process-personas.png',
-    alt: 'Three Fragrantica user personas with their habits, goals and pain points'
+    name: 'Low-fidelity Prototype',
+    copy: 'I created low-fidelity prototypes to define the structure of the key screens and work through the main user flows before moving into visual design. This made it possible to explore search, filtering and fragrance details quickly while keeping the focus on hierarchy and usability.',
+    image: 'assets/fragrantica/process-low-fidelity.png',
+    alt: 'Low-fidelity mobile prototypes for the Fragrantica app'
+  },
+  {
+    name: 'Interactive Prototype',
+    copy: 'I connected the final screens into an interactive prototype to test navigation and complete product scenarios. The prototype covers the journey from onboarding and discovery to search, filtering, fragrance details and evaluation.',
+    image: 'assets/fragrantica/process-interactive-prototype.png',
+    alt: 'Interactive Fragrantica prototype showing connected mobile screens and user flows'
   }
 ];
 
