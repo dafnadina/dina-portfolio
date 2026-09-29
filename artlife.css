@@ -11,13 +11,67 @@
   background: #f2f1eb;
 }
 
-.artlife-page .screens-track img {
-  object-fit: contain;
+.artlife-page .artlife-desktop-screens {
+  position: relative;
+  width: 1016px;
+  height: 1133px;
+  overflow: hidden;
+}
+
+.artlife-page .artlife-desktop-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.artlife-page .artlife-screen-card {
+  width: 450px;
+  background: #fff;
+}
+
+.artlife-page .artlife-screen-card--left {
+  top: 84px;
+  left: 72px;
+  height: 930px;
+}
+
+.artlife-page .artlife-screen-card--right {
+  z-index: 1;
+  top: 6px;
+  left: 494px;
+  height: 1121px;
+}
+
+.artlife-page .artlife-screen-card img {
   object-position: top center;
-  background: #f2f1eb;
 }
 
 .dark-theme.artlife-page .process-image img.is-contain,
-.dark-theme.artlife-page .screens-track img {
+.dark-theme.artlife-page .artlife-desktop-screens {
   background: #2a2a2a;
+}
+
+@media (max-width: 760px) {
+  .artlife-page .artlife-desktop-screens {
+    width: calc(100% - 76px);
+    height: 138vw;
+  }
+
+  .artlife-page .artlife-screen-card {
+    width: 55vw;
+    padding: 7px;
+  }
+
+  .artlife-page .artlife-screen-card--left {
+    top: 10vw;
+    left: 0;
+    height: 112vw;
+  }
+
+  .artlife-page .artlife-screen-card--right {
+    top: 1vw;
+    right: 0;
+    left: auto;
+    height: 134vw;
+  }
 }

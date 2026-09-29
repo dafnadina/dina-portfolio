@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="museum.css" />
     <link rel="stylesheet" href="placeholder-project.css?v=20260929-2" />
-    <link rel="stylesheet" href="artlife.css?v=20260929-1" />
+    <link rel="stylesheet" href="artlife.css?v=20260929-2" />
   </head>
   <body class="museum-page placeholder-project-page artlife-page">
     <header class="portfolio-header">
@@ -72,10 +72,19 @@
           </div>
           <div class="screens-carousel">
             <button type="button" aria-label="Previous screens" data-screen-prev><img src="assets/museum/process-prev.svg" alt="" /></button>
-            <div class="screens-track">
-              <img src="assets/artlife/screen-main.png" alt="Artlife desktop homepage" />
-              <img src="assets/artlife/screen-projects.png" alt="Artlife standard projects catalogue" />
-              <img src="assets/artlife/screen-mobile.png" alt="Artlife mobile homepage" />
+            <div class="screens-content artlife-desktop-screens">
+              <div class="artlife-desktop-page active" data-screens-page>
+                <div class="desktop-screen-card artlife-screen-card artlife-screen-card--left"><div><img src="assets/artlife/screen-main.png" alt="Artlife desktop homepage" /></div></div>
+                <div class="desktop-screen-card artlife-screen-card artlife-screen-card--right"><div><img src="assets/artlife/screen-projects.png" alt="Artlife desktop standard projects catalogue" /></div></div>
+              </div>
+              <div class="artlife-desktop-page" data-screens-page hidden>
+                <div class="desktop-screen-card artlife-screen-card artlife-screen-card--left"><div><img src="assets/artlife/screen-portfolio.png" alt="Artlife desktop portfolio page" /></div></div>
+                <div class="desktop-screen-card artlife-screen-card artlife-screen-card--right"><div><img src="assets/artlife/screen-calculator.png" alt="Artlife desktop project cost calculator" /></div></div>
+              </div>
+              <div class="artlife-desktop-page" data-screens-page hidden>
+                <div class="desktop-screen-card artlife-screen-card artlife-screen-card--left"><div><img src="assets/artlife/screen-calculator-standard.png" alt="Artlife desktop standard project calculator" /></div></div>
+                <div class="desktop-screen-card artlife-screen-card artlife-screen-card--right"><div><img src="assets/artlife/screen-calculator-custom.png" alt="Artlife desktop individual project calculator" /></div></div>
+              </div>
             </div>
             <button type="button" aria-label="Next screens" data-screen-next><img src="assets/museum/process-next.svg" alt="" /></button>
           </div>
