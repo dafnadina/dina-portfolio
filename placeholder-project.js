@@ -16,14 +16,16 @@ const renderPlaceholderProcess = () => {
   document.querySelector('[data-process-count]').textContent = `${placeholderProcessIndex + 1}/3 Replace Later`;
   document.querySelector('[data-process-copy]').textContent = placeholderText;
 };
-document.querySelector('[data-process-prev]')?.addEventListener('click', () => {
-  placeholderProcessIndex = (placeholderProcessIndex + 2) % 3;
-  renderPlaceholderProcess();
-});
-document.querySelector('[data-process-next]')?.addEventListener('click', () => {
-  placeholderProcessIndex = (placeholderProcessIndex + 1) % 3;
-  renderPlaceholderProcess();
-});
+if (!document.querySelector('[data-process-image]')) {
+  document.querySelector('[data-process-prev]')?.addEventListener('click', () => {
+    placeholderProcessIndex = (placeholderProcessIndex + 2) % 3;
+    renderPlaceholderProcess();
+  });
+  document.querySelector('[data-process-next]')?.addEventListener('click', () => {
+    placeholderProcessIndex = (placeholderProcessIndex + 1) % 3;
+    renderPlaceholderProcess();
+  });
+}
 
 const placeholderScreensTrack = document.querySelector('.screens-track');
 const placeholderScreenPages = [...document.querySelectorAll('[data-screens-page]')];
