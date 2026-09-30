@@ -1,5 +1,23 @@
 const artlifeProcessSteps = [
   {
+    name: 'Interview Guides',
+    copy: 'I prepared separate interview scenarios for experienced clients and people choosing an architectural bureau for the first time, so the research could reflect different expectations and decision-making patterns.',
+    image: 'assets/artlife/process-interview-guides.png',
+    alt: 'Interview guides for experienced and first-time architecture clients'
+  },
+  {
+    name: 'Interview Analysis',
+    copy: 'Six in-depth interviews were conducted and analysed. I grouped observations, needs and pain points to identify what builds trust in an architectural bureau and what information clients need before making contact.',
+    image: 'assets/artlife/process-interview-analysis.png',
+    alt: 'Analysed interview transcripts with highlighted insights'
+  },
+  {
+    name: 'User Flow',
+    copy: 'Based on the research, I mapped two core paths: selecting a standard project and searching for an individual project. Both flows lead users from exploration to cost calculation or a consultation request.',
+    image: 'assets/artlife/process-user-flow.png',
+    alt: 'User flows for standard and individual architectural projects'
+  },
+  {
     name: 'Responsive Design',
     copy: 'I designed the core experience across desktop, tablet and mobile, adapting content hierarchy and navigation while keeping the architectural character of the interface consistent at every breakpoint.',
     image: 'assets/artlife/process-responsive.png',
