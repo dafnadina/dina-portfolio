@@ -9,7 +9,7 @@
 .fragrantica-page .screens-page { display: none; align-items: flex-start; gap: 28px; }
 .fragrantica-page .screens-page.active { display: flex; }
 .fragrantica-page .screen-frame { width: 320px; flex: 0 0 320px; border: 1px solid #000; padding: 7px; background: transparent; }
-.fragrantica-page .screen-bezel { overflow: hidden; border: 6px solid #000; border-radius: 26px; background: #000; }
+.fragrantica-page .screen-bezel { overflow: hidden; border: 6px solid #000; border-radius: 40px; background: #000; }
 .fragrantica-page .screen-bezel img { display: block; width: 100%; height: auto; object-fit: initial; }
 .fragrantica-page .process-image img.is-contain { background: #f4eded; }
 .dark-theme .placeholder-project-page .placeholder-media { background: #505050; }
