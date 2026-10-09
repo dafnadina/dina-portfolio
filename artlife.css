@@ -1,6 +1,6 @@
 .artlife-page .hero-small img {
-  object-fit: contain;
-  background: #292929;
+  object-fit: cover;
+  object-position: 52% center;
 }
 
 .artlife-page .hero-animation-frame img {
@@ -57,16 +57,6 @@
 }
 
 @media (max-width: 760px) {
-  .artlife-page .hero-small {
-    height: auto;
-  }
-
-  .artlife-page .hero-small img {
-    display: block;
-    height: auto;
-    border-radius: 28px;
-  }
-
   .artlife-page .artlife-desktop-screens {
     width: calc(100% - 76px);
     height: 138vw;
