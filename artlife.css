@@ -1,7 +1,6 @@
 .artlife-page .hero-small img {
   object-fit: cover;
-  object-position: 52% 30px;
-  background: linear-gradient(90deg, #383838, #303030);
+  object-position: 68% center;
 }
 
 .artlife-page .hero-animation-frame img {
