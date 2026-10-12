@@ -73,6 +73,11 @@
   height: 930px;
 }
 
+.artlife-page .artlife-screen-card--calculator {
+  width: 420px;
+  height: 575px;
+}
+
 .artlife-page .artlife-screen-card--right {
   z-index: 1;
   top: 6px;
@@ -82,6 +87,10 @@
 
 .artlife-page .artlife-screen-card img {
   object-position: top center;
+}
+
+.artlife-page .artlife-screen-card--calculator img {
+  object-fit: contain;
 }
 
 .dark-theme.artlife-page .process-image img.is-contain,
@@ -110,6 +119,10 @@
     top: 10vw;
     left: 0;
     height: 112vw;
+  }
+
+  .artlife-page .artlife-screen-card--calculator {
+    height: calc(76.96vw - 7.2px);
   }
 
   .artlife-page .artlife-screen-card--right {
