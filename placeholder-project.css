@@ -3,7 +3,6 @@
 .placeholder-project-page .hero-animation-frame { border-color: #000; }
 .fragrantica-page .hero-animation-frame { background: #b8c9e5; }
 .placeholder-project-page .showcase-grid .placeholder-media { width: 448px; height: 528px; }
-.placeholder-project-page .process-image.placeholder-media { border-color: #000; }
 .placeholder-project-page .screens-carousel { top: 152px; }
 .placeholder-project-page .screens-track .placeholder-media { width: 320px; height: 1133px; flex: 0 0 320px; }
 .fragrantica-page .screens-track { display: block; width: 1016px; overflow: hidden; }
@@ -15,8 +14,7 @@
 .fragrantica-page .process-image img.is-contain { background: #f4eded; }
 .dark-theme .placeholder-project-page .placeholder-media { background: #505050; }
 .dark-theme .placeholder-project-page .hero-small .placeholder-media,
-.dark-theme .placeholder-project-page .hero-animation-frame,
-.dark-theme .placeholder-project-page .process-image.placeholder-media { border-color: #fff; }
+.dark-theme .placeholder-project-page .hero-animation-frame { border-color: #fff; }
 .dark-theme .fragrantica-page .process-image img.is-contain { background: #2a2a2a; }
 
 @media (max-width:760px) {
@@ -32,6 +30,6 @@
 }
 
 @media (min-width:761px) {
-  .fragrantica-page .case-shell { height: 5165px; }
+  .fragrantica-page .case-shell { height: 5365px; }
   .fragrantica-page .screens-section { height: 2390px; }
 }
