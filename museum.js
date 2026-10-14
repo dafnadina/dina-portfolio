@@ -10,24 +10,36 @@ document.querySelectorAll('[data-case-tab]').forEach((button) => {
   });
 });
 
-const screensPages = [...document.querySelectorAll('[data-screens-page]')];
-let screensPageIndex = 0;
+const screenPages = {
+  mobile: [...document.querySelectorAll('[data-screens-page]')],
+  desktop: [...document.querySelectorAll('[data-desktop-page]')]
+};
+const screenPageIndex = { mobile: 0, desktop: 0 };
+let screenMode = 'mobile';
+
+document.querySelectorAll('.mobile-screen-card').forEach((viewport) => {
+  viewport.tabIndex = 0;
+  viewport.setAttribute('aria-label', `Scroll the ${viewport.querySelector('img').alt}`);
+});
+
 const updateScreensPage = () => {
-  screensPages.forEach((page, index) => {
-    const isActive = index === screensPageIndex;
-    page.classList.toggle('active', isActive);
-    page.hidden = !isActive;
-    if (isActive) page.querySelectorAll('.mobile-screen-card').forEach((viewport) => { viewport.scrollTop = 0; });
+  Object.entries(screenPages).forEach(([mode, pages]) => {
+    pages.forEach((page, index) => {
+      const isActive = index === screenPageIndex[mode];
+      page.classList.toggle('active', isActive);
+      page.hidden = !isActive;
+      if (isActive && mode === screenMode) page.querySelectorAll('.mobile-screen-card, .desktop-screen-card > div').forEach((viewport) => { viewport.scrollTop = 0; });
+    });
   });
 };
-document.querySelector('[data-screen-prev]')?.addEventListener('click', () => {
-  screensPageIndex = (screensPageIndex - 1 + screensPages.length) % screensPages.length;
+
+const changeScreensPage = (direction) => {
+  const pages = screenPages[screenMode];
+  screenPageIndex[screenMode] = (screenPageIndex[screenMode] + direction + pages.length) % pages.length;
   updateScreensPage();
-});
-document.querySelector('[data-screen-next]')?.addEventListener('click', () => {
-  screensPageIndex = (screensPageIndex + 1) % screensPages.length;
-  updateScreensPage();
-});
+};
+document.querySelector('[data-screen-prev]')?.addEventListener('click', () => changeScreensPage(-1));
+document.querySelector('[data-screen-next]')?.addEventListener('click', () => changeScreensPage(1));
 
 let processIndex = 0;
 const processSteps = [
@@ -67,7 +79,7 @@ document.querySelector('[data-process-next]')?.addEventListener('click', () => {
 document.querySelectorAll('[data-screen-mode]').forEach((button) => {
   button.addEventListener('click', () => {
     document.querySelectorAll('[data-screen-mode]').forEach((item) => item.classList.toggle('active', item === button));
-    const showDesktop = button.dataset.screenMode === 'desktop';
-    document.querySelector('.screens-section').classList.toggle('show-desktop', showDesktop);
+    screenMode = button.dataset.screenMode;
+    document.querySelector('.screens-section').classList.toggle('show-desktop', screenMode === 'desktop');
   });
 });

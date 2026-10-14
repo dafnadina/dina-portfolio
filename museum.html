@@ -13,7 +13,7 @@
     <link rel="preload" as="image" href="assets/museum/showcase-2-hq.webp" type="image/webp" />
     <link rel="preload" as="image" href="assets/museum/showcase-3-hq.webp" type="image/webp" />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="museum.css?v=20261014-1" />
+    <link rel="stylesheet" href="museum.css?v=20261014-2" />
   </head>
   <body class="museum-page gnm-page">
     <header class="portfolio-header">
@@ -96,11 +96,37 @@
                 </div>
               </div>
               <div class="desktop-screens-stage" data-desktop-screens>
-                <div class="desktop-screen-card desktop-screen-card--science">
-                  <div><img src="assets/museum/screen-desktop-science.png" alt="Georgian National Museum Science desktop screen" /></div>
+                <div class="desktop-screens-page active" data-desktop-page>
+                  <div class="desktop-screen-card desktop-screen-card--short">
+                    <div tabindex="0" aria-label="Scroll the Science desktop screen"><img src="assets/museum/screen-desktop-science.png" alt="Georgian National Museum Science desktop screen" /></div>
+                  </div>
+                  <div class="desktop-screen-card desktop-screen-card--tall">
+                    <div tabindex="0" aria-label="Scroll the Collections desktop screen"><img src="assets/museum/screen-desktop-collection.png" alt="Georgian National Museum Collections desktop screen" /></div>
+                  </div>
                 </div>
-                <div class="desktop-screen-card desktop-screen-card--collection">
-                  <div><img src="assets/museum/screen-desktop-collection.png" alt="Georgian National Museum Collection desktop screen" /></div>
+                <div class="desktop-screens-page" data-desktop-page hidden>
+                  <div class="desktop-screen-card desktop-screen-card--short">
+                    <div tabindex="0" aria-label="Scroll the 404 desktop screen"><img loading="lazy" src="assets/museum/screen-desktop-404.png" alt="Georgian National Museum 404 desktop screen" /></div>
+                  </div>
+                  <div class="desktop-screen-card desktop-screen-card--tall">
+                    <div tabindex="0" aria-label="Scroll the Home desktop screen"><img loading="lazy" src="assets/museum/screen-desktop-home.png" alt="Georgian National Museum Home desktop screen" /></div>
+                  </div>
+                </div>
+                <div class="desktop-screens-page" data-desktop-page hidden>
+                  <div class="desktop-screen-card desktop-screen-card--short">
+                    <div tabindex="0" aria-label="Scroll the Museum card desktop screen"><img loading="lazy" src="assets/museum/screen-desktop-museum-card.png" alt="Georgian National Museum museum card desktop screen" /></div>
+                  </div>
+                  <div class="desktop-screen-card desktop-screen-card--tall">
+                    <div tabindex="0" aria-label="Scroll the Our museums desktop screen"><img loading="lazy" src="assets/museum/screen-desktop-our-museums.png" alt="Georgian National Museum Our museums desktop screen" /></div>
+                  </div>
+                </div>
+                <div class="desktop-screens-page" data-desktop-page hidden>
+                  <div class="desktop-screen-card desktop-screen-card--short">
+                    <div tabindex="0" aria-label="Scroll the Education desktop screen"><img loading="lazy" src="assets/museum/screen-desktop-education.png" alt="Georgian National Museum Education desktop screen" /></div>
+                  </div>
+                  <div class="desktop-screen-card desktop-screen-card--tall">
+                    <div tabindex="0" aria-label="Scroll the What's on desktop screen"><img loading="lazy" src="assets/museum/screen-desktop-whats-on.png" alt="Georgian National Museum What's on desktop screen" /></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -117,6 +143,6 @@
       <button class="theme-switch" type="button" aria-label="Switch color theme"><strong>Light</strong><span> / Dark</span></button>
     </footer>
     <script src="script.js"></script>
-    <script src="museum.js?v=20261014-1"></script>
+    <script src="museum.js?v=20261014-2"></script>
   </body>
 </html>
