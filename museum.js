@@ -17,7 +17,7 @@ const screenPages = {
 const screenPageIndex = { mobile: 0, desktop: 0 };
 let screenMode = 'mobile';
 
-document.querySelectorAll('.mobile-screen-card').forEach((viewport) => {
+document.querySelectorAll('.mobile-screen-viewport').forEach((viewport) => {
   viewport.tabIndex = 0;
   viewport.setAttribute('aria-label', `Scroll the ${viewport.querySelector('img').alt}`);
 });
@@ -28,7 +28,7 @@ const updateScreensPage = () => {
       const isActive = index === screenPageIndex[mode];
       page.classList.toggle('active', isActive);
       page.hidden = !isActive;
-      if (isActive && mode === screenMode) page.querySelectorAll('.mobile-screen-card, .desktop-screen-card > div').forEach((viewport) => { viewport.scrollTop = 0; });
+      if (isActive && mode === screenMode) page.querySelectorAll('.mobile-screen-viewport, .desktop-screen-card > div').forEach((viewport) => { viewport.scrollTop = 0; });
     });
   });
 };
