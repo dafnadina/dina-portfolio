@@ -76,6 +76,7 @@ function renderScreen() {
   field('screenText').textContent = screen.text;
   field('screenImage').src = screen.image;
   field('screenCount').textContent = `${activeScreen + 1} of ${project.screens.length}`;
+  document.querySelector('.screen-preview').scrollTop = 0;
 }
 
 document.querySelectorAll('[data-tab]').forEach((tab) => {

@@ -17,6 +17,7 @@ const updateScreensPage = () => {
     const isActive = index === screensPageIndex;
     page.classList.toggle('active', isActive);
     page.hidden = !isActive;
+    if (isActive) page.querySelectorAll('.mobile-screen-card').forEach((viewport) => { viewport.scrollTop = 0; });
   });
 };
 document.querySelector('[data-screen-prev]')?.addEventListener('click', () => {

@@ -50,8 +50,8 @@ h1, h2 { margin: 0; font-family: "Kaisei Opti", serif; font-size: 48px; font-wei
 .screen-controls img { width: 24px; height: 24px; }
 .screen-controls button:first-child img { transform: rotate(-90deg); }
 .screen-controls button:last-child img { transform: rotate(90deg); }
-.screen-preview { width: 468px; height: 628px; margin-top: 114px; overflow: hidden; border-radius: 8px; }
-.screen-preview img { width: 100%; height: 112%; object-fit: cover; object-position: top; }
+.screen-preview { width: 468px; height: auto; max-height: 628px; margin-top: 114px; overflow-x: hidden; overflow-y: auto; border-radius: 8px; }
+.screen-preview img { display: block; width: 100%; height: auto; object-fit: contain; }
 .case-availability { position: absolute; top: 2868px; left: 74px; line-height: 40px; }
 .case-footer { display: flex; width: 1096px; height: 160px; gap: 48px; margin-left: 280px; padding: 72px; border-radius: 0 8px 0 0; background: var(--soft); }
 .case-footer a { color: var(--muted); font-size: 16px; text-decoration-line: underline; text-decoration-color: rgba(133,133,133,.38); text-decoration-thickness: 1px; text-underline-offset: 2px; text-transform: uppercase; }
@@ -85,7 +85,7 @@ h1, h2 { margin: 0; font-family: "Kaisei Opti", serif; font-size: 48px; font-wei
   .screen-description { margin-top: 64px; }
   .screen-description p { width: auto; }
   .screen-controls { margin-top: 64px; }
-  .screen-preview { width: calc(100% - 48px); height: 520px; margin: 0 24px 24px; }
+  .screen-preview { width: calc(100% - 48px); max-height: 520px; margin: 0 24px 24px; }
   .case-availability { line-height: 1.2; }
   .case-footer { width: 100%; height: auto; min-height: 160px; flex-wrap: wrap; gap: 20px 32px; margin: 0; padding: 40px 20px; border-radius: 0; }
   .case-footer a { font-size: 13px; }

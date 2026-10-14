@@ -64,28 +64,41 @@
 
 .artlife-page .artlife-screen-card {
   width: 450px;
+  height: auto;
+  max-height: var(--screen-card-max-height);
+  overflow: hidden;
   background: #fff;
 }
 
 .artlife-page .artlife-screen-card--left {
+  --screen-card-max-height: 930px;
   top: 84px;
   left: 72px;
-  height: 930px;
 }
 
 .artlife-page .artlife-screen-card--calculator {
+  --screen-card-max-height: 575px;
   width: 420px;
-  height: 575px;
 }
 
 .artlife-page .artlife-screen-card--right {
+  --screen-card-max-height: 1121px;
   z-index: 1;
   top: 6px;
   left: 494px;
-  height: 1121px;
+}
+
+.artlife-page .artlife-screen-card > div {
+  height: auto;
+  max-height: calc(var(--screen-card-max-height) - var(--screen-card-inset, 30px));
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .artlife-page .artlife-screen-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
   object-position: top center;
 }
 
@@ -111,24 +124,25 @@
   }
 
   .artlife-page .artlife-screen-card {
+    --screen-card-inset: 16px;
     width: 55vw;
     padding: 7px;
   }
 
   .artlife-page .artlife-screen-card--left {
+    --screen-card-max-height: 112vw;
     top: 10vw;
     left: 0;
-    height: 112vw;
   }
 
   .artlife-page .artlife-screen-card--calculator {
-    height: calc(76.96vw - 7.2px);
+    --screen-card-max-height: calc(76.96vw - 7.2px);
   }
 
   .artlife-page .artlife-screen-card--right {
+    --screen-card-max-height: 134vw;
     top: 1vw;
     right: 0;
     left: auto;
-    height: 134vw;
   }
 }

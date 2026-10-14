@@ -35,6 +35,7 @@ const renderPlaceholderScreenPage = () => {
     const isActive = index === placeholderScreenPageIndex;
     page.classList.toggle('active', isActive);
     page.hidden = !isActive;
+    if (isActive) page.querySelectorAll('.screen-bezel, .artlife-screen-card > div').forEach((viewport) => { viewport.scrollTop = 0; });
   });
 };
 document.querySelector('[data-screen-prev]')?.addEventListener('click', () => {
