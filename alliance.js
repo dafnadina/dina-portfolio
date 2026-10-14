@@ -72,12 +72,12 @@ document.querySelector('[data-process-next]')?.addEventListener('click', () => {
 
 const allianceScreenPages = [
   [
-    { name: 'Home', src: 'assets/project-dh-screens/main.png' },
-    { name: 'Projects', src: 'assets/project-dh-screens/projects.png' }
+    { name: 'Projects', src: 'assets/project-dh-screens/projects.png' },
+    { name: 'Home', src: 'assets/project-dh-screens/main.png' }
   ],
   [
-    { name: 'Project', src: 'assets/project-dh-screens/project.png' },
-    { name: 'Vacancies', src: 'assets/project-dh-screens/vacancies.png' }
+    { name: 'Vacancies', src: 'assets/project-dh-screens/vacancies.png' },
+    { name: 'Project', src: 'assets/project-dh-screens/project.png' }
   ],
   [
     { name: 'Vacancy application', src: 'assets/project-dh-screens/vacancy.png' },
@@ -104,6 +104,7 @@ const renderAllianceScreens = () => {
     link.setAttribute('aria-label', `Open DH Alliance ${screen.name.toLowerCase()} screen in full size`);
     image.src = screen.src;
     image.alt = `DH Alliance ${screen.name.toLowerCase()} screen`;
+    slot.querySelector(':scope > div').scrollTop = 0;
   });
   document.querySelector('[data-alliance-screen-caption]').textContent = `${page.map((screen) => screen.name).join(' / ')} · ${allianceScreenPageIndex + 1} of ${allianceScreenPages.length} — scroll a preview or open it in full size`;
 };

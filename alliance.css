@@ -9,10 +9,10 @@
 .alliance-page .screens-carousel { top: 152px; }
 .alliance-page .screens-content { position: relative; width: 1016px; height: 1133px; }
 .alliance-page .desktop-screens-stage { display: block; width: 1016px; height: 1133px; }
-.alliance-page .desktop-screen-card { position: absolute; min-width: 0; min-height: 0; overflow: hidden; }
-.alliance-page .desktop-screen-card--left { top: 84px; left: 143px; width: 450px; height: 666px; }
-.alliance-page .desktop-screen-card--right { z-index: 1; top: 6px; left: 423px; width: 450px; height: 1121px; }
-.alliance-page .desktop-screen-card > div { min-height: 0; overflow-x: hidden; overflow-y: auto; }
+.alliance-page .desktop-screen-card { position: absolute; height: auto; max-height: var(--screen-card-max-height); min-width: 0; min-height: 0; overflow: hidden; }
+.alliance-page .desktop-screen-card--left { --screen-card-max-height: 666px; top: 84px; left: 143px; width: 450px; }
+.alliance-page .desktop-screen-card--right { --screen-card-max-height: 1121px; z-index: 1; top: 6px; left: 423px; width: 450px; }
+.alliance-page .desktop-screen-card > div { height: auto; max-height: calc(var(--screen-card-max-height) - 30px); min-height: 0; overflow-x: hidden; overflow-y: auto; }
 .alliance-page .desktop-screen-card a { display: block; width: 100%; height: auto; cursor: zoom-in; }
 .alliance-page .desktop-screen-card a:focus-visible { outline: 3px solid #0637ff; outline-offset: -3px; }
 .alliance-page .desktop-screen-card img { width: 100%; height: auto; object-fit: contain; }
@@ -26,6 +26,6 @@
   .alliance-page .screens-content { width: 100%; height: auto; overflow: visible; }
   .alliance-page .screens-carousel { display: grid; grid-template-columns: 28px minmax(0, 1fr) 28px; gap: 8px; align-items: center; }
   .alliance-page .desktop-screens-stage { position: static; width: 100%; height: auto; display: flex; flex-direction: column; gap: 16px; }
-  .alliance-page .desktop-screen-card { position: static; width: 100%; height: min(100vw, 520px); max-height: none; }
+  .alliance-page .desktop-screen-card { --screen-card-max-height: min(100vw, 520px); position: static; width: 100%; }
   .alliance-page .alliance-screen-caption { position: static; margin-top: 24px; font-size: 13px; line-height: 20px; }
 }
