@@ -12,7 +12,7 @@
     <link rel="preload" as="image" href="assets/project-dh-showcase-pushkin.png" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="museum.css?v=20261013-1" />
-    <link rel="stylesheet" href="alliance.css" />
+    <link rel="stylesheet" href="alliance.css?v=20261014-1" />
   </head>
   <body class="museum-page alliance-page">
     <header class="portfolio-header">
@@ -74,17 +74,20 @@
             <h2>Screens</h2>
           </div>
           <div class="screens-carousel">
+            <button type="button" aria-label="Previous DH Alliance screens" data-alliance-screen-prev><img src="assets/museum/process-prev.svg" alt="" /></button>
             <div class="screens-content">
               <div class="desktop-screens-stage">
-                <div class="desktop-screen-card desktop-screen-card--about">
-                  <div><img src="assets/project-dh-screen-about.png" alt="DH Alliance about screen" /></div>
+                <div class="desktop-screen-card desktop-screen-card--left" data-alliance-screen-left>
+                  <div><a href="assets/project-dh-screen-about.png" target="_blank" rel="noopener" aria-label="Open DH Alliance about screen in full size"><img src="assets/project-dh-screen-about.png" alt="DH Alliance about screen" /></a></div>
                 </div>
-                <div class="desktop-screen-card desktop-screen-card--project">
-                  <div><img src="assets/project-dh-screen-project.png" alt="DH Alliance project screen" /></div>
+                <div class="desktop-screen-card desktop-screen-card--right" data-alliance-screen-right>
+                  <div><a href="assets/project-dh-screen-project.png" target="_blank" rel="noopener" aria-label="Open DH Alliance project screen in full size"><img src="assets/project-dh-screen-project.png" alt="DH Alliance project screen" /></a></div>
                 </div>
               </div>
             </div>
+            <button type="button" aria-label="Next DH Alliance screens" data-alliance-screen-next><img src="assets/museum/process-next.svg" alt="" /></button>
           </div>
+          <p class="alliance-screen-caption" data-alliance-screen-caption aria-live="polite">About / Project · 1 of 6 — open an image to see the full screen</p>
         </section>
       </article>
 
@@ -96,6 +99,6 @@
       <button class="theme-switch" type="button" aria-label="Switch color theme"><strong>Light</strong><span> / Dark</span></button>
     </footer>
     <script src="script.js"></script>
-    <script src="alliance.js"></script>
+    <script src="alliance.js?v=20261014-1"></script>
   </body>
 </html>
