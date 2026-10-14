@@ -72,39 +72,32 @@ document.querySelector('[data-process-next]')?.addEventListener('click', () => {
 
 const allianceScreenPages = [
   [
-    { name: 'About', src: 'assets/project-dh-screen-about.png' },
-    { name: 'Project', src: 'assets/project-dh-screen-project.png' }
-  ],
-  [
     { name: 'Home', src: 'assets/project-dh-screens/main.png' },
     { name: 'Projects', src: 'assets/project-dh-screens/projects.png' }
   ],
   [
-    { name: 'Vacancies', src: 'assets/project-dh-screens/vacancies.png' },
-    { name: 'Vacancy application', src: 'assets/project-dh-screens/vacancy.png' }
+    { name: 'Project', src: 'assets/project-dh-screens/project.png' },
+    { name: 'Vacancies', src: 'assets/project-dh-screens/vacancies.png' }
   ],
   [
-    { name: 'Education', src: 'assets/project-dh-screens/education.png' },
-    { name: 'Publications', src: 'assets/project-dh-screens/publications.png' }
+    { name: 'Vacancy application', src: 'assets/project-dh-screens/vacancy.png' },
+    { name: 'Education', src: 'assets/project-dh-screens/education.png' }
   ],
   [
-    { name: 'Tools', src: 'assets/project-dh-screens/tools.png' },
-    { name: 'Tool detail', src: 'assets/project-dh-screens/tool.png' }
+    { name: 'Publications', src: 'assets/project-dh-screens/publications.png' },
+    { name: 'Tools', src: 'assets/project-dh-screens/tools.png' }
   ],
   [
+    { name: 'Tool detail', src: 'assets/project-dh-screens/tool.png' },
     { name: 'Events', src: 'assets/project-dh-screens/news.png' }
   ]
 ];
 let allianceScreenPageIndex = 0;
-const allianceScreenStage = document.querySelector('.alliance-page .desktop-screens-stage');
 const allianceScreenSlots = [document.querySelector('[data-alliance-screen-left]'), document.querySelector('[data-alliance-screen-right]')];
 const renderAllianceScreens = () => {
   const page = allianceScreenPages[allianceScreenPageIndex];
-  allianceScreenStage.classList.toggle('single-screen', page.length === 1);
   allianceScreenSlots.forEach((slot, index) => {
     const screen = page[index];
-    slot.hidden = !screen;
-    if (!screen) return;
     const link = slot.querySelector('a');
     const image = slot.querySelector('img');
     link.href = screen.src;
@@ -112,7 +105,7 @@ const renderAllianceScreens = () => {
     image.src = screen.src;
     image.alt = `DH Alliance ${screen.name.toLowerCase()} screen`;
   });
-  document.querySelector('[data-alliance-screen-caption]').textContent = `${page.map((screen) => screen.name).join(' / ')} · ${allianceScreenPageIndex + 1} of ${allianceScreenPages.length} — open an image to see the full screen`;
+  document.querySelector('[data-alliance-screen-caption]').textContent = `${page.map((screen) => screen.name).join(' / ')} · ${allianceScreenPageIndex + 1} of ${allianceScreenPages.length} — scroll a preview or open it in full size`;
 };
 document.querySelector('[data-alliance-screen-prev]')?.addEventListener('click', () => {
   allianceScreenPageIndex = (allianceScreenPageIndex - 1 + allianceScreenPages.length) % allianceScreenPages.length;
