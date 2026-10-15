@@ -60,10 +60,12 @@
 .screens-carousel > button:hover, .screens-carousel > button:focus-visible { outline: none; }
 .screens-carousel > button:hover img, .screens-carousel > button:focus-visible img { filter: invert(19%) sepia(100%) saturate(5449%) hue-rotate(232deg) brightness(97%) contrast(113%); }
 .screens-carousel > button img { width: 42px; height: 42px; transition: filter .2s ease; }
+.screens-scroll-hint { position: absolute; top: 825px; left: 0; width: 100%; margin: 0; color: #888; font-size: 14px; line-height: 20px; text-align: center; }
 .gnm-page .case-shell { height: 3897px; }
 .gnm-page .case-shell:has(.screens-section.show-desktop) { height: 4232px; }
-.gnm-page .screens-section { height: 803px; }
-.gnm-page .screens-section.show-desktop { height: 1138px; }
+.gnm-page .screens-section { height: 850px; }
+.gnm-page .screens-section.show-desktop { height: 1183px; }
+.gnm-page .screens-section.show-desktop .screens-scroll-hint { top: 1158px; }
 .gnm-page .screens-content { position: relative; width: 1016px; height: 585px; overflow: hidden; }
 .gnm-page .screens-section.show-desktop .screens-content { height: 920px; }
 .screens-track { display: flex; gap: 28px; }
@@ -143,6 +145,7 @@
   .process-section > p { width: auto; }
   .screens-section { width: 100%; height: auto; margin-top: 130px; border: 0; }
   .screens-heading, .screens-carousel { position: static; transform: none; }
+  .screens-scroll-hint { position: static; width: auto; margin: 20px 0 0; font-size: 12px; line-height: 18px; }
   .screens-heading { margin-bottom: 36px; }
   .device-tabs { gap: 10px; }
   .device-tabs button { padding: 6px 12px; font-size: 17px; }
