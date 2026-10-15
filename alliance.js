@@ -98,15 +98,11 @@ const renderAllianceScreens = () => {
   const page = allianceScreenPages[allianceScreenPageIndex];
   allianceScreenSlots.forEach((slot, index) => {
     const screen = page[index];
-    const link = slot.querySelector('a');
     const image = slot.querySelector('img');
-    link.href = screen.src;
-    link.setAttribute('aria-label', `Open DH Alliance ${screen.name.toLowerCase()} screen in full size`);
     image.src = screen.src;
     image.alt = `DH Alliance ${screen.name.toLowerCase()} screen`;
     slot.querySelector(':scope > div').scrollTop = 0;
   });
-  document.querySelector('[data-alliance-screen-caption]').textContent = `${page.map((screen) => screen.name).join(' / ')} · ${allianceScreenPageIndex + 1} of ${allianceScreenPages.length} — scroll a preview or open it in full size`;
 };
 document.querySelector('[data-alliance-screen-prev]')?.addEventListener('click', () => {
   allianceScreenPageIndex = (allianceScreenPageIndex - 1 + allianceScreenPages.length) % allianceScreenPages.length;

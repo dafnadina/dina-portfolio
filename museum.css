@@ -61,11 +61,12 @@
 .screens-carousel > button:hover img, .screens-carousel > button:focus-visible img { filter: invert(19%) sepia(100%) saturate(5449%) hue-rotate(232deg) brightness(97%) contrast(113%); }
 .screens-carousel > button img { width: 42px; height: 42px; transition: filter .2s ease; }
 .screens-scroll-hint { position: absolute; top: 845px; left: 0; width: 100%; margin: 0; color: #6b6b6b; font-size: 14px; line-height: 20px; text-align: center; }
-.gnm-page .case-shell { height: 3897px; }
-.gnm-page .case-shell:has(.screens-section.show-desktop) { height: 4232px; }
+.gnm-page .case-shell { height: 3955px; }
+.gnm-page .case-shell:has(.screens-section.show-desktop) { height: 4290px; }
 .gnm-page .screens-section { height: 870px; }
 .gnm-page .screens-section.show-desktop { height: 1203px; }
 .gnm-page .screens-section.show-desktop .screens-scroll-hint { top: 1178px; }
+.alliance-page .screens-scroll-hint, .artlife-page .screens-scroll-hint { top: 1325px; }
 .gnm-page .screens-content { position: relative; width: 1016px; height: 585px; overflow: hidden; }
 .gnm-page .screens-section.show-desktop .screens-content { height: 920px; }
 .screens-track { display: flex; gap: 28px; }
@@ -117,7 +118,7 @@
 
 @media (max-width:760px) {
   .museum-page .portfolio-header { height: 190px; }
-  .case-shell { width: calc(100% - 24px); height: auto; padding: 28px 14px 80px; }
+  .case-shell { width: calc(100% - 24px); height: auto; padding: 28px 14px 160px; }
   .case-shell::before, .case-shell::after { display: none; }
   .case-back, .case-shell h1, .case-hero, .case-details, .case-intro, .showcase-grid, .problem-section, .process-section, .screens-section { position: static; transform: none; }
   .case-back { display: block; margin-bottom: 48px; }
