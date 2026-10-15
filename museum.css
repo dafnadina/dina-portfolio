@@ -61,13 +61,14 @@
 .screens-carousel > button:hover img, .screens-carousel > button:focus-visible img { filter: invert(19%) sepia(100%) saturate(5449%) hue-rotate(232deg) brightness(97%) contrast(113%); }
 .screens-carousel > button img { width: 42px; height: 42px; transition: filter .2s ease; }
 .screens-scroll-hint { position: absolute; top: 845px; left: 0; width: 100%; margin: 0; color: #6b6b6b; font-size: 14px; line-height: 20px; text-align: center; }
-.gnm-page .case-shell { height: 3955px; }
+.gnm-page .case-shell { height: 4050px; }
 .gnm-page .case-shell:has(.screens-section.show-desktop) { height: 4290px; }
-.gnm-page .screens-section { height: 870px; }
+.gnm-page .screens-section { height: 965px; }
+.gnm-page .screens-scroll-hint { top: 940px; }
 .gnm-page .screens-section.show-desktop { height: 1203px; }
 .gnm-page .screens-section.show-desktop .screens-scroll-hint { top: 1178px; }
 .alliance-page .screens-scroll-hint, .artlife-page .screens-scroll-hint { top: 1325px; }
-.gnm-page .screens-content { position: relative; width: 1016px; height: 585px; overflow: hidden; }
+.gnm-page .screens-content { position: relative; width: 1016px; height: 680px; overflow: hidden; }
 .gnm-page .screens-section.show-desktop .screens-content { height: 920px; }
 .screens-track { display: flex; gap: 28px; }
 .gnm-page .screens-track { display: block; width: 100%; overflow: hidden; }
@@ -89,7 +90,7 @@
 .gnm-page .desktop-screen-card--tall { --screen-card-max-height: 900px; }
 .gnm-page .desktop-screen-card > div { box-sizing: border-box; height: auto; max-height: calc(var(--screen-card-max-height) - 30px); overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; }
 .gnm-page .desktop-screen-card img { width: 100%; height: auto; object-fit: contain; }
-.gnm-page .mobile-screen-card { box-sizing: border-box; width: 320px; height: 585px; flex: 0 0 320px; border: 1px solid #000; padding: 7px; background: transparent; }
+.gnm-page .mobile-screen-card { box-sizing: border-box; width: 320px; height: 680px; flex: 0 0 320px; border: 1px solid #000; padding: 7px; background: transparent; }
 .gnm-page .mobile-screen-viewport { height: 100%; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; border: 6px solid #000; border-radius: 40px; background: #000; }
 .gnm-page .mobile-screen-card img { display: block; width: 100%; height: auto; object-fit: initial; }
 .next-project { position: relative; display: flex; width: 1384px; height: 298px; margin: 0 auto 120px; align-items: center; justify-content: center; border: 1px solid #c0c0c0; border-top: 0; background: #fff; font-size: 32px; font-weight: 500; letter-spacing: 2.56px; text-transform: uppercase; }
@@ -165,7 +166,7 @@
   .gnm-page .screens-section, .gnm-page .screens-section.show-desktop { height: auto; }
   .gnm-page .screens-section.show-desktop .screens-content { height: auto; }
   .gnm-page .screens-track { width: 100%; overflow-x: auto; }
-  .gnm-page .mobile-screen-card { width: 78vw; height: min(97.5vw, 338px); flex-basis: 78vw; }
+  .gnm-page .mobile-screen-card { width: 78vw; height: min(113.33vw, 393px); flex-basis: 78vw; }
   .gnm-page .mobile-screen-card img { width: 100%; height: auto; }
   .gnm-page .desktop-screens-stage { position: static; width: 100%; height: auto; }
   .gnm-page .desktop-screens-page.active { position: static; display: flex; flex-direction: column; gap: 16px; }
