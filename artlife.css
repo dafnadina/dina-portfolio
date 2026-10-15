@@ -73,19 +73,18 @@
 .artlife-page .artlife-screen-card--left {
   --screen-card-max-height: 930px;
   top: 84px;
-  left: 72px;
+  left: 143px;
 }
 
 .artlife-page .artlife-screen-card--calculator {
   --screen-card-max-height: 575px;
-  width: 420px;
 }
 
 .artlife-page .artlife-screen-card--right {
   --screen-card-max-height: 1121px;
   z-index: 1;
   top: 6px;
-  left: 494px;
+  left: 423px;
 }
 
 .artlife-page .artlife-screen-card > div {
