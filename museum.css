@@ -60,13 +60,18 @@
 .screens-carousel > button:hover, .screens-carousel > button:focus-visible { outline: none; }
 .screens-carousel > button:hover img, .screens-carousel > button:focus-visible img { filter: invert(19%) sepia(100%) saturate(5449%) hue-rotate(232deg) brightness(97%) contrast(113%); }
 .screens-carousel > button img { width: 42px; height: 42px; transition: filter .2s ease; }
-.gnm-page .screens-content { position: relative; width: 1016px; height: 1133px; overflow: hidden; }
+.gnm-page .case-shell { height: 3897px; }
+.gnm-page .case-shell:has(.screens-section.show-desktop) { height: 4232px; }
+.gnm-page .screens-section { height: 803px; }
+.gnm-page .screens-section.show-desktop { height: 1138px; }
+.gnm-page .screens-content { position: relative; width: 1016px; height: 585px; overflow: hidden; }
+.gnm-page .screens-section.show-desktop .screens-content { height: 920px; }
 .screens-track { display: flex; gap: 28px; }
 .gnm-page .screens-track { display: block; width: 100%; overflow: hidden; }
 .gnm-page .screens-page { display: none; gap: 28px; }
 .gnm-page .screens-page.active { display: flex; }
 .screens-track img { width: 320px; height: 1133px; object-fit: cover; }
-.desktop-screens-stage { position: relative; display: none; width: 1016px; height: 1133px; }
+.desktop-screens-stage { position: relative; display: none; width: 1016px; height: 920px; }
 .screens-section.show-desktop .screens-track { display: none; }
 .screens-section.show-desktop .desktop-screens-stage { display: block; }
 .desktop-screens-page { position: absolute; inset: 0; display: none; }
@@ -151,6 +156,9 @@
   .screens-track img { width: 78vw; height: auto; flex: 0 0 78vw; }
   .gnm-page .screens-carousel { display: grid; grid-template-columns: 28px minmax(0, 1fr) 28px; gap: 8px; align-items: center; }
   .gnm-page .screens-content { width: 100%; height: auto; overflow: visible; }
+  .gnm-page .case-shell, .gnm-page .case-shell:has(.screens-section.show-desktop) { height: auto; }
+  .gnm-page .screens-section, .gnm-page .screens-section.show-desktop { height: auto; }
+  .gnm-page .screens-section.show-desktop .screens-content { height: auto; }
   .gnm-page .screens-track { width: 100%; overflow-x: auto; }
   .gnm-page .mobile-screen-card { width: 78vw; height: min(97.5vw, 338px); flex-basis: 78vw; }
   .gnm-page .mobile-screen-card img { width: 100%; height: auto; }
