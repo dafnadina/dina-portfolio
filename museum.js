@@ -46,20 +46,20 @@ const processSteps = [
   {
     name: 'References',
     copy: 'I explored museum websites, collecting and organising visual references to inform the layout, typography and interaction patterns of the new interface. This helped me explore different design approaches and establish a visual direction for the project',
-    image: 'assets/museum/process.png',
+    image: 'assets/museum/process.webp',
     alt: 'A collection of museum website references'
   },
   {
     name: 'Redlines',
     copy: 'Alongside desktop and mobile layouts, a redline version was created for every screen to document the grid, spacing, dimensions and alignment for development',
-    image: 'assets/museum/process-interactive-prototype-v2.png',
+    image: 'assets/museum/process-interactive-prototype-v2.webp',
     alt: 'Redline versions of the Georgian National Museum desktop screens',
     contain: true
   },
   {
     name: 'Interactive Prototype',
     copy: 'An interactive prototype was created to test navigation, user flows and the connections between desktop and mobile screens before the final handoff',
-    image: 'assets/museum/process-interactive-prototype.png',
+    image: 'assets/museum/process-interactive-prototype.webp',
     alt: 'Interactive prototype connections between Georgian National Museum screens',
     contain: true
   }
