@@ -1,0 +1,25 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" rx="4" fill="white"/>
+<g clip-path="url(#clip0_235_2)">
+<g filter="url(#filter0_f_235_2)">
+<ellipse cx="24.0557" cy="25.0557" rx="22.5577" ry="8.63381" transform="rotate(-45 24.0557 25.0557)" fill="#0637FF" fill-opacity="0.8"/>
+</g>
+</g>
+<rect x="3.15" y="3.15" width="41.7" height="41.7" rx="7.85" stroke="black" stroke-width="0.3"/>
+<path d="M15.28 10H28.04L33.56 18.24V34.52L30.2 38H15.28V10ZM19.04 13.44V34.6H28.64L29.76 33.44V18.8L26.16 13.44H19.04Z" fill="white"/>
+<mask id="stroke0_235_2" maskUnits="userSpaceOnUse" x="14" y="9" width="20" height="30" fill="black">
+<rect fill="white" x="14" y="9" width="20" height="30"/>
+<path d="M15.28 10H28.04L33.56 18.24V34.52L30.2 38H15.28V10ZM19.04 13.44V34.6H28.64L29.76 33.44V18.8L26.16 13.44H19.04Z"/>
+</mask>
+<path d="M15.28 10H28.04L33.56 18.24V34.52L30.2 38H15.28V10ZM19.04 13.44V34.6H28.64L29.76 33.44V18.8L26.16 13.44H19.04Z" stroke-width="0.6" stroke="black" mask="url(#stroke0_235_2)"/>
+<defs>
+<filter id="filter0_f_235_2" x="-5.02808" y="-4.02832" width="58.1675" height="58.168" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="6" result="effect1_foregroundBlur_235_2"/>
+</filter>
+<clipPath id="clip0_235_2">
+<rect x="3" y="3" width="42" height="42" rx="8" fill="white"/>
+</clipPath>
+</defs>
+</svg>
