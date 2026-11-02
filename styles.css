@@ -23,15 +23,14 @@ a { color: inherit; text-decoration: none; }
 .intro-complete .identity-dot { animation: dotReveal .18s ease-out .7s both; }
 .intro-complete .portfolio-header nav { animation: contentIntro .42s cubic-bezier(.22, 1, .36, 1) both; }
 .intro-complete .project-strip { animation: contentIntro .42s cubic-bezier(.22, 1, .36, 1) .1s both; }
-.intro-complete .work-card { animation: contentIntro .34s cubic-bezier(.22, 1, .36, 1) calc(.04s + var(--intro-stagger, 0s)) both; }
 .intro-complete .work-card:nth-child(1) { --intro-stagger: 0s; }
-.intro-complete .work-card:nth-child(2) { --intro-stagger: .17s; }
-.intro-complete .work-card:nth-child(3) { --intro-stagger: .34s; }
-.intro-complete .work-card:nth-child(4) { --intro-stagger: .51s; }
+.intro-complete .work-card:nth-child(2) { --intro-stagger: .04s; }
+.intro-complete .work-card:nth-child(3) { --intro-stagger: .08s; }
+.intro-complete .work-card:nth-child(4) { --intro-stagger: .12s; }
 .intro-complete .work-image::before { position: absolute; z-index: 1; inset: 10px; border: 1px solid var(--ink); border-radius: 48px; pointer-events: none; content: ""; animation: frameIntro .75s cubic-bezier(.22, 1, .36, 1) calc(.12s + var(--intro-stagger, 0s)) both; }
 .intro-complete .work-image img { animation: photoIntro .5s cubic-bezier(.22, 1, .36, 1) calc(.29s + var(--intro-stagger, 0s)) both; }
-.intro-complete .work-meta { animation: contentIntro .42s cubic-bezier(.22, 1, .36, 1) calc(.49s + var(--intro-stagger, 0s)) both; }
-.intro-complete .typing-char { animation: revealChar 1ms linear calc(.48s + var(--intro-stagger, 0s) + var(--char-index) * 18ms) both; }
+.intro-complete .work-meta,
+.intro-complete .work-card h2 { animation: contentIntro .42s cubic-bezier(.22, 1, .36, 1) calc(.49s + var(--intro-stagger, 0s)) both; }
 .intro-complete .portfolio-footer { animation: fadeIntro .45s ease-out .55s both; }
 
 @keyframes identityIntro {
@@ -52,11 +51,6 @@ a { color: inherit; text-decoration: none; }
 @keyframes typeIntro {
   from { clip-path: inset(0 100% 0 0); }
   to { clip-path: inset(0 0 0 0); }
-}
-
-@keyframes revealChar {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
 @keyframes dotReveal {
@@ -108,7 +102,6 @@ a { color: inherit; text-decoration: none; }
 .work-meta i { position: relative; width: 11px; height: 11px; flex: 0 0 11px; }
 .work-meta i::before { position: absolute; top: -6px; left: -6px; width: 23px; height: 23px; background: url("assets/home-v2/meta-dot.svg") center/contain no-repeat; content: ""; }
 .work-card h2 { width: 262px; margin: 0 0 0 11px; font-size: 16px; font-weight: 500; line-height: normal; letter-spacing: 1.28px; }
-.typing-word { white-space: nowrap; }
 .work-card:not(:first-child)::after { position: absolute; top: 355px; left: 0; width: 1px; height: 100px; background: var(--ink); content: ""; }
 
 .portfolio-footer { position: relative; height: 446px; overflow: hidden; background: linear-gradient(90deg, var(--black) 0%, #0637ff 52%, var(--black) 100%); color: #fff; text-transform: uppercase; }
@@ -170,10 +163,9 @@ a { color: inherit; text-decoration: none; }
   .intro-complete .identity-dot,
   .intro-complete .portfolio-header nav,
   .intro-complete .project-strip,
-  .intro-complete .work-card,
   .intro-complete .work-image::before,
   .intro-complete .work-image img,
   .intro-complete .work-meta,
-  .intro-complete .typing-char,
+  .intro-complete .work-card h2,
   .intro-complete .portfolio-footer { animation: none; }
 }
