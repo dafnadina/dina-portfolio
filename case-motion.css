@@ -13,6 +13,10 @@
 .case-motion-ready .case-type-heading.is-visible .case-type-char {
   animation: caseTypeChar 1ms steps(1, end) calc(var(--char-index) * 15ms) both;
 }
+.case-motion-ready .case-title-meta { opacity: 0; }
+.case-motion-ready .case-type-heading.is-visible .case-title-meta {
+  animation: caseMetaIn .3s ease calc(var(--heading-chars) * 15ms) both;
+}
 .case-type-word { white-space: nowrap; }
 
 @keyframes caseTypeChar {
@@ -20,7 +24,13 @@
   to { opacity: 1; }
 }
 
+@keyframes caseMetaIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .case-motion-ready .case-reveal,
-  .case-motion-ready .case-type-char { opacity: 1; translate: none; animation: none; transition: none; }
+  .case-motion-ready .case-type-char,
+  .case-motion-ready .case-title-meta { opacity: 1; translate: none; animation: none; transition: none; }
 }

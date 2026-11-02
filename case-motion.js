@@ -4,7 +4,7 @@
 
   const headings = [...shell.querySelectorAll(':scope > h1, .process-section > h2, .screens-heading > h2')];
   const blocks = [...shell.querySelectorAll([
-    '.hero-small', '.hero-large', '.project-links', '.project-meta', '.case-intro',
+    '.hero-small', '.hero-large', '.project-links', '.case-intro',
     '.showcase-grid > *', '.case-tabs', '.problem-section > p',
     '.process-carousel', '.process-section > h3', '.process-section > p',
     '.device-tabs', '.screens-carousel', '.screens-scroll-hint'
@@ -12,9 +12,14 @@
 
   headings.forEach((heading) => {
     const plainHeading = heading.cloneNode(true);
+    plainHeading.querySelector('.case-title-meta')?.remove();
     plainHeading.querySelectorAll('br').forEach((breakNode) => breakNode.replaceWith(' '));
-    const spokenTitle = plainHeading.textContent.replace(/\s+/g, ' ').trim();
-    const walker = document.createTreeWalker(heading, NodeFilter.SHOW_TEXT);
+    const title = plainHeading.textContent.replace(/\s+/g, ' ').trim();
+    const meta = [...heading.querySelectorAll('.case-title-meta span')].map((label) => label.textContent.trim());
+    const walker = document.createTreeWalker(heading, NodeFilter.SHOW_TEXT, {
+      acceptNode: (node) => node.parentElement.closest('.case-title-meta')
+        ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
+    });
     const textNodes = [];
     let charIndex = 0;
     while (walker.nextNode()) textNodes.push(walker.currentNode);
@@ -44,7 +49,8 @@
       textNode.replaceWith(fragment);
     });
 
-    heading.setAttribute('aria-label', spokenTitle);
+    heading.setAttribute('aria-label', [title, ...meta].join(', '));
+    heading.style.setProperty('--heading-chars', charIndex);
     heading.classList.add('case-type-heading');
   });
 
