@@ -17,14 +17,16 @@ const finishIntro = (skipAnimation = false) => {
   rememberIntro();
 };
 
-if (document.body.classList.contains('intro-running') && hasSeenIntro()) {
-  finishIntro(true);
-} else if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  finishIntro(true);
-} else {
-  identity?.addEventListener('animationend', (event) => {
-    if (event.target === identity && event.animationName === 'identityIntro') finishIntro();
-  });
+if (document.body.classList.contains('intro-running')) {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    finishIntro(true);
+  } else if (hasSeenIntro()) {
+    finishIntro();
+  } else {
+    identity?.addEventListener('animationend', (event) => {
+      if (event.target === identity && event.animationName === 'identityIntro') finishIntro();
+    });
+  }
 }
 
 identity?.addEventListener('click', rememberIntro);
