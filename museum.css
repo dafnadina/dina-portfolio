@@ -8,8 +8,9 @@
 .case-back { position: absolute; top: 40px; left: 49px; color: #757575; font-size: 16px; text-transform: uppercase; transition: color .2s ease; }
 .case-back:hover, .case-back:focus-visible { color: #0637ff; outline: none; }
 .case-shell h1 { position: absolute; top: 102px; left: 61px; width: 1272px; margin: 0; font-size: 48px; font-weight: 500; line-height: normal; letter-spacing: 3.84px; text-transform: uppercase; }
-.case-title-meta { display: inline-flex; align-items: center; gap: 14px; margin-left: 18px; color: #6b6b6b; font-size: 14px; font-weight: 400; line-height: 24px; letter-spacing: 1.12px; white-space: nowrap; vertical-align: middle; }
-.case-title-meta i { width: 23px; height: 23px; flex: 0 0 23px; margin: -6px; background: url("assets/home-v2/meta-dot.svg") center/contain no-repeat; }
+.case-title-meta { display: inline-flex; align-items: center; gap: .22em; margin-left: .22em; color: #6b6b6b; font-size: 1em; font-weight: inherit; line-height: 1.15; letter-spacing: 0; vertical-align: middle; }
+.case-title-tag { display: inline-flex; align-items: center; gap: .12em; white-space: nowrap; }
+.case-title-tag i { width: .85em; height: .85em; flex: 0 0 .85em; background: url("assets/home-v2/meta-dot.svg") center/contain no-repeat; }
 .case-hero { position: absolute; top: 237px; left: 49px; display: flex; }
 .hero-small, .hero-large { height: 357px; border: 1px solid #000; padding: 10px; }
 .hero-small { width: 336px; }
@@ -124,7 +125,7 @@
   .case-back, .case-shell h1, .case-hero, .case-details, .case-intro, .showcase-grid, .problem-section, .process-section, .screens-section { position: static; transform: none; }
   .case-back { display: block; margin-bottom: 48px; }
   .case-shell h1 { width: auto; margin-bottom: 36px; font-size: 28px; letter-spacing: 2px; }
-  .case-title-meta { display: flex; width: max-content; margin: 18px 0 0; font-size: 12px; letter-spacing: .7px; }
+  .case-title-meta { display: flex; width: 100%; flex-wrap: wrap; margin: 18px 0 0; }
   .case-hero { display: block; }
   .hero-small, .hero-large { width: 100%; }
   .hero-large { display: none; }

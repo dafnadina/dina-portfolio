@@ -15,7 +15,7 @@
     plainHeading.querySelector('.case-title-meta')?.remove();
     plainHeading.querySelectorAll('br').forEach((breakNode) => breakNode.replaceWith(' '));
     const title = plainHeading.textContent.replace(/\s+/g, ' ').trim();
-    const meta = [...heading.querySelectorAll('.case-title-meta span')].map((label) => label.textContent.trim());
+    const meta = [...heading.querySelectorAll('.case-title-tag')].map((label) => label.textContent.trim());
     const walker = document.createTreeWalker(heading, NodeFilter.SHOW_TEXT, {
       acceptNode: (node) => node.parentElement.closest('.case-title-meta')
         ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
