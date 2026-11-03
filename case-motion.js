@@ -4,7 +4,7 @@
 
   const headings = [...shell.querySelectorAll(':scope > h1, .process-section > h2, .screens-heading > h2')];
   const blocks = [...shell.querySelectorAll([
-    '.hero-small', '.hero-large', '.project-links', '.case-intro',
+    '.hero-small', '.hero-large', '.project-links', '.case-highlights', '.case-intro',
     '.showcase-grid > *', '.case-tabs', '.problem-section > p',
     '.process-carousel', '.process-section > h3', '.process-section > p',
     '.device-tabs', '.screens-carousel', '.screens-scroll-hint'
