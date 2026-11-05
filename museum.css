@@ -185,9 +185,9 @@
   .process-carousel > button:first-child:is(:active, :focus-visible)::after { -webkit-mask-image: url("assets/museum/process-prev.svg"); mask-image: url("assets/museum/process-prev.svg"); }
   .screens-carousel > button:last-child:is(:active, :focus-visible)::after,
   .process-carousel > button:last-child:is(:active, :focus-visible)::after { -webkit-mask-image: url("assets/museum/process-next.svg"); mask-image: url("assets/museum/process-next.svg"); }
-  .device-tabs button.active { border-color: #000; color: #000; }
-  .device-tabs button:active,
-  .device-tabs button:focus-visible { border-color: #0637ff; color: #0637ff; }
-  .device-tabs button:hover:not(.active):not(:active):not(:focus-visible) { border-color: transparent; color: #000; }
+  .gnm-page .device-tabs button { color: #000; -webkit-tap-highlight-color: transparent; }
+  .gnm-page .device-tabs button:not(:active):is(:hover, :focus, :focus-visible) { border-color: transparent; color: #000; }
+  .gnm-page .device-tabs button.active:not(:active):is(:hover, :focus, :focus-visible) { border-color: #000; }
+  .gnm-page .device-tabs button:active { border-color: #0637ff; color: #0637ff; }
   .next-project { width: calc(100% - 24px); height: 180px; font-size: 24px; }
 }
