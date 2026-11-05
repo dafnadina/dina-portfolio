@@ -105,8 +105,8 @@
   object-fit: contain;
 }
 
-.dark-theme.artlife-page .process-image img.is-contain,
-.dark-theme.artlife-page .artlife-desktop-screens {
+.dark-theme .artlife-page .process-image img.is-contain,
+.dark-theme .artlife-page .artlife-desktop-screens {
   background: #2a2a2a;
 }
 

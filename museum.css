@@ -111,6 +111,15 @@
 .dark-theme .case-shell::before, .dark-theme .case-shell::after { background: #fff; }
 .dark-theme .hero-small, .dark-theme .hero-large,
 .dark-theme .hero-small img, .dark-theme .hero-animation-frame { border-color: #fff; }
+.dark-theme .alliance-page .hero-small-window,
+.dark-theme .museum-page .desktop-screen-card,
+.dark-theme .museum-page .desktop-screen-card > div,
+.dark-theme .gnm-page .mobile-screen-card,
+.dark-theme .gnm-page .mobile-screen-viewport,
+.dark-theme .fragrantica-page .screen-frame,
+.dark-theme .fragrantica-page .screen-bezel,
+.dark-theme .case-highlight { border-color: #fff; }
+.dark-theme .museum-page .desktop-screen-card { background: #101010; }
 .dark-theme .project-links a { border-color: #fff; }
 .dark-theme .case-title-meta { color: #777; }
 .dark-theme .process-section > p, .dark-theme .screens-scroll-hint { color: #aaa; }
