@@ -93,11 +93,15 @@ const allianceScreenPages = [
   ]
 ];
 let allianceScreenPageIndex = 0;
+let allianceMobileScreenIndex = 0;
+const allianceMobileLayout = window.matchMedia('(max-width: 760px)');
+const allianceScreens = allianceScreenPages.flat();
 const allianceScreenSlots = [document.querySelector('[data-alliance-screen-left]'), document.querySelector('[data-alliance-screen-right]')];
 const renderAllianceScreens = () => {
   const page = allianceScreenPages[allianceScreenPageIndex];
   allianceScreenSlots.forEach((slot, index) => {
-    const screen = page[index];
+    if (allianceMobileLayout.matches && index === 1) return;
+    const screen = allianceMobileLayout.matches ? allianceScreens[allianceMobileScreenIndex] : page[index];
     const image = slot.querySelector('img');
     image.src = screen.src;
     image.alt = siteLanguage.t(`DH Alliance ${screen.name.toLowerCase()} screen`);
@@ -105,10 +109,28 @@ const renderAllianceScreens = () => {
   });
 };
 document.querySelector('[data-alliance-screen-prev]')?.addEventListener('click', () => {
-  allianceScreenPageIndex = (allianceScreenPageIndex - 1 + allianceScreenPages.length) % allianceScreenPages.length;
+  if (allianceMobileLayout.matches) {
+    allianceMobileScreenIndex = (allianceMobileScreenIndex - 1 + allianceScreens.length) % allianceScreens.length;
+    allianceScreenPageIndex = Math.floor(allianceMobileScreenIndex / 2);
+  } else {
+    allianceScreenPageIndex = (allianceScreenPageIndex - 1 + allianceScreenPages.length) % allianceScreenPages.length;
+    allianceMobileScreenIndex = allianceScreenPageIndex * 2;
+  }
   renderAllianceScreens();
 });
 document.querySelector('[data-alliance-screen-next]')?.addEventListener('click', () => {
-  allianceScreenPageIndex = (allianceScreenPageIndex + 1) % allianceScreenPages.length;
+  if (allianceMobileLayout.matches) {
+    allianceMobileScreenIndex = (allianceMobileScreenIndex + 1) % allianceScreens.length;
+    allianceScreenPageIndex = Math.floor(allianceMobileScreenIndex / 2);
+  } else {
+    allianceScreenPageIndex = (allianceScreenPageIndex + 1) % allianceScreenPages.length;
+    allianceMobileScreenIndex = allianceScreenPageIndex * 2;
+  }
   renderAllianceScreens();
 });
+allianceMobileLayout.addEventListener('change', ({ matches }) => {
+  if (matches) allianceMobileScreenIndex = allianceScreenPageIndex * 2;
+  else allianceScreenPageIndex = Math.floor(allianceMobileScreenIndex / 2);
+  renderAllianceScreens();
+});
+renderAllianceScreens();

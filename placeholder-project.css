@@ -27,5 +27,6 @@
   .fragrantica-page .case-shell, .fragrantica-page .screens-section { height: auto; }
   .fragrantica-page .screens-track { width: calc(100% - 76px); }
   .fragrantica-page .screens-page { gap: 12px; }
-  .fragrantica-page .screen-frame { width: 78vw; height: min(113.33vw, 393px); flex-basis: 78vw; }
+  .fragrantica-page .screen-frame { width: 100%; height: min(140vw, 480px); flex-basis: 100%; }
+  .fragrantica-page .screen-frame--scanner { height: min(136vw, 466px); }
 }

@@ -114,12 +114,14 @@
 
   .artlife-page .artlife-desktop-screens {
     width: calc(100% - 76px);
-    height: 138vw;
+    height: auto;
   }
+
+  .artlife-page .artlife-desktop-page { height: auto; }
 
   .artlife-page .artlife-screen-card {
     --screen-card-inset: 16px;
-    width: 55vw;
+    width: 100%;
     padding: 7px;
   }
 
@@ -139,4 +141,7 @@
     right: 0;
     left: auto;
   }
+
+  .artlife-page .artlife-desktop-screens .artlife-screen-card { --screen-card-max-height: min(140vw, 520px); position: static; display: none; }
+  .artlife-page .artlife-desktop-screens .artlife-screen-card.is-mobile-current { display: block; }
 }

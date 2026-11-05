@@ -45,15 +45,15 @@
   .lang-ru .resume-download { font-size: 10.5px; letter-spacing: .4px; }
 
   .lang-ru .museum-page .case-shell h1 { font-size: 23px; letter-spacing: 1.2px; }
-  .lang-ru .alliance-page .case-shell h1 { font-size: 21px; letter-spacing: .6px; }
+  .lang-ru .alliance-page .case-shell h1 { font-size: 23px; letter-spacing: .6px; }
   .lang-ru .case-title-meta { margin-top: .5em; }
   .lang-ru .project-links a { font-size: 12px; }
   .lang-ru .case-highlights { font-size: 11.5px; }
   .lang-ru .case-intro,
   .lang-ru .problem-section > p { font-size: 14.5px; line-height: 24px; }
-  .lang-ru .case-tabs button { font-size: 21px; }
+  .lang-ru .case-tabs button { font-size: clamp(15px, 4.6vw, 18px); }
   .lang-ru .process-section h2,
-  .lang-ru .screens-heading h2 { font-size: 24px; }
+  .lang-ru .screens-heading h2 { font-size: 23px; }
   .lang-ru .process-section h3 { font-size: 14.5px; line-height: 24px; }
   .lang-ru .process-section > p,
   .lang-ru .screens-scroll-hint { font-size: 11px; line-height: 19px; }

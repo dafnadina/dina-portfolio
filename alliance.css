@@ -23,4 +23,5 @@
   .alliance-page .screens-carousel { display: grid; grid-template-columns: 28px minmax(0, 1fr) 28px; gap: 8px; align-items: center; }
   .alliance-page .desktop-screens-stage { position: static; width: 100%; height: auto; display: flex; flex-direction: column; gap: 16px; }
   .alliance-page .desktop-screen-card { --screen-card-max-height: min(100vw, 520px); position: static; width: 100%; }
+  .alliance-page .desktop-screen-card--right { display: none; }
 }
