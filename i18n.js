@@ -36,7 +36,7 @@ const russianCopy = new Map(Object.entries({
   'Redesign': 'Редизайн',
   'Greenfield': 'С нуля',
   'Concept': 'Концепт',
-  'Commercial': 'Заказной',
+  'Commercial': 'Коммерческий',
   'Redesign of Georgian National Museum Website': 'Редизайн сайта Национального музея Грузии',
   'Mobile App for iOS Fragrantica': 'Мобильное приложение Fragrantica для iOS',
   'Architectural Firm “Artlife”': 'Сайт архитектурного бюро Artlife',
