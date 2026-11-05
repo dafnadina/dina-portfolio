@@ -28,6 +28,7 @@ a { color: inherit; text-decoration: none; }
 .intro-complete .work-card:nth-child(3) { --intro-stagger: .08s; }
 .intro-complete .work-card:nth-child(4) { --intro-stagger: .12s; }
 .intro-complete .work-image::before { position: absolute; z-index: 1; inset: 10px; border: 1px solid var(--ink); border-radius: 48px; pointer-events: none; content: ""; animation: frameIntro .75s cubic-bezier(.22, 1, .36, 1) calc(.12s + var(--intro-stagger, 0s)) both; }
+.intro-complete .work-card:is(:hover, :focus-visible, :active) .work-image::before { opacity: 0; animation: none; }
 .intro-complete .work-image img { animation: photoIntro .5s cubic-bezier(.22, 1, .36, 1) calc(.29s + var(--intro-stagger, 0s)) both; }
 .intro-complete .work-meta,
 .intro-complete .work-card h2 { animation: contentIntro .42s cubic-bezier(.22, 1, .36, 1) calc(.49s + var(--intro-stagger, 0s)) both; }
@@ -98,6 +99,7 @@ a { color: inherit; text-decoration: none; }
 .work-image--rendered img { border: 0; }
 .work-card:hover .work-image img, .work-card:focus-visible .work-image img { filter: grayscale(1); transform: scale(.985); }
 .work-card:hover .work-image, .work-card:focus-visible .work-image { background: #0637ff; }
+@media (min-width: 761px) { .work-card:focus-visible { outline: none; } }
 .work-meta { display: flex; height: 30px; align-items: center; gap: 16px; padding: 0 11px; color: var(--muted); font-size: 14px; letter-spacing: 1.12px; white-space: nowrap; }
 .work-meta i { position: relative; width: 11px; height: 11px; flex: 0 0 11px; }
 .work-meta i::before { position: absolute; top: -6px; left: -6px; width: 23px; height: 23px; background: url("assets/home-v2/meta-dot.svg") center/contain no-repeat; content: ""; }
