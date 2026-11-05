@@ -4,11 +4,13 @@
   --muted: #757575;
   --page: #fff;
   --ink: #000;
+  --site-font: "Kode Mono", monospace;
 }
+.lang-ru { --site-font: "JetBrains Mono", monospace; }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; overflow-x: hidden; color: var(--ink); background: var(--page); font-family: "Kode Mono", monospace; font-weight: 400; font-synthesis: none; -webkit-font-smoothing: antialiased; }
+body { margin: 0; overflow-x: hidden; color: var(--ink); background: var(--page); font-family: var(--site-font); font-weight: 400; font-synthesis: none; -webkit-font-smoothing: antialiased; }
 a { color: inherit; text-decoration: none; }
 
 .intro-running { overflow: hidden; }
@@ -84,12 +86,13 @@ a { color: inherit; text-decoration: none; }
 
 .portfolio-header { position: relative; height: 239px; padding-top: 40px; text-transform: uppercase; }
 .identity { display: flex; width: max-content; align-items: center; gap: 16px; margin: 0 auto; font-size: 24px; letter-spacing: 1.92px; }
-.identity > span:not(.identity-dot) { font-family: "Kode Mono", monospace; font-weight: 400; }
+.identity > span:not(.identity-dot) { font-family: var(--site-font); font-weight: 400; }
 .identity img { width: 27px; height: 27px; margin: -8px; }
 .identity-dot { width: 11px; height: 11px; flex: 0 0 11px; border-radius: 50%; background: var(--violet); filter: blur(4px); transition: background-color .2s ease, transform .2s ease; }
 .identity:hover .identity-dot, .identity:focus-visible .identity-dot, .identity:active .identity-dot { background: #0637ff; transform: scale(1.15); }
 .portfolio-header nav { display: flex; justify-content: center; gap: 24px; margin-top: 28px; }
 .portfolio-header nav a { display: flex; min-width: 144px; justify-content: center; padding: 0 36px; font-size: 16px; letter-spacing: 1.28px; white-space: nowrap; }
+.lang-ru .portfolio-header nav a { font-weight: 300; }
 .portfolio-header nav a.active { color: #fff; background: linear-gradient(90deg, #fff, var(--violet) 55.288%, var(--black)); }
 .portfolio-header nav a:hover, .portfolio-header nav a:focus-visible { color: #fff; background: linear-gradient(90deg, #fff, #0637ff 55.288%, var(--black)); outline: none; }
 
@@ -115,7 +118,7 @@ a { color: inherit; text-decoration: none; }
 .contact-links { display: flex; gap: 64px; font-size: 16px; letter-spacing: 1.28px; white-space: nowrap; }
 .contact-links a { transition: color .2s ease; }
 .contact-links a:hover, .contact-links a:focus-visible { color: #c8d5ff; outline: none; }
-.language-switch { position: absolute; bottom: 45px; left: 50%; border: 0; padding: 0; transform: translateX(-50%); color: rgb(211 211 216 / 62%); background: none; font: 400 16px "Kode Mono", monospace; letter-spacing: 1.28px; text-transform: uppercase; cursor: pointer; }
+.language-switch { position: absolute; bottom: 45px; left: 50%; border: 0; padding: 0; transform: translateX(-50%); color: rgb(211 211 216 / 62%); background: none; font: 400 16px var(--site-font); letter-spacing: 1.28px; text-transform: uppercase; cursor: pointer; }
 .language-switch strong { color: rgb(255 255 255 / 78%); font-weight: 700; }
 .language-switch:focus-visible { outline: 2px solid #fff; outline-offset: 7px; }
 

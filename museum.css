@@ -41,7 +41,7 @@
 .showcase-grid img { width: 448px; height: 528px; object-fit: cover; }
 .problem-section { position: absolute; top: 1829px; left: 50%; width: 600px; transform: translateX(-50%); text-align: center; }
 .case-tabs { display: flex; align-items: center; justify-content: center; gap: 48px; }
-.case-tabs button { border: 1px solid transparent; border-radius: 48px; padding: 8px 20px; color: #000; background: none; font: 400 36px "Kode Mono",monospace; text-transform: uppercase; cursor: pointer; transition: border-color .2s ease, color .2s ease, background-color .2s ease; }
+.case-tabs button { border: 1px solid transparent; border-radius: 48px; padding: 8px 20px; color: #000; background: none; font: 400 36px var(--site-font); text-transform: uppercase; cursor: pointer; transition: border-color .2s ease, color .2s ease, background-color .2s ease; }
 .case-tabs button.active { border-color: #000; }
 .case-tabs button:hover, .case-tabs button:focus-visible { border-color: #0637ff; color: #0637ff; outline: none; }
 .case-tabs img { width: 78px; }
@@ -63,7 +63,7 @@
 .screens-heading { position: absolute; top: 51px; left: 0; text-transform: uppercase; }
 .screens-heading h2 { margin: 0 0 24px; font-size: 36px; font-weight: 400; }
 .device-tabs { display: flex; align-items: center; gap: 24px; font-size: 24px; }
-.device-tabs button { border: 1px solid transparent; border-radius: 48px; padding: 8px 20px; background: none; font: 400 24px "Kode Mono",monospace; text-transform: uppercase; cursor: pointer; transition: color .2s ease, border-color .2s ease; }
+.device-tabs button { border: 1px solid transparent; border-radius: 48px; padding: 8px 20px; background: none; font: 400 24px var(--site-font); text-transform: uppercase; cursor: pointer; transition: color .2s ease, border-color .2s ease; }
 .device-tabs button.active { border-color: #000; }
 .device-tabs button:hover, .device-tabs button:focus-visible { border-color: #0637ff; color: #0637ff; outline: none; }
 .screens-carousel { position: absolute; top: 218px; left: 50%; display: flex; transform: translateX(-50%); align-items: center; gap: 80px; }
