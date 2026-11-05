@@ -1,18 +1,18 @@
 /* A quieter type scale for the Russian preview. English keeps its original styles. */
-.lang-ru body { font-weight: 300; }
-.lang-ru :is(h1, h2, h3, h4, h5, h6, strong, b) { font-weight: 400; }
+.lang-ru body { font-weight: 200; }
+.lang-ru :is(h1, h2, h3, h4, h5, h6, strong, b) { font-weight: 300; }
 
 .lang-ru .identity { font-size: 21px; letter-spacing: 1.5px; }
-.lang-ru .identity > span:not(.identity-dot) { font-weight: 300; }
-.lang-ru .portfolio-header nav a { font-size: 14px; letter-spacing: 1px; }
+.lang-ru .identity > span:not(.identity-dot) { font-weight: 200; }
+.lang-ru .portfolio-header nav a { font-size: 14px; font-weight: 200; letter-spacing: 1px; }
 .lang-ru .work-meta { height: 32px; font-size: 12px; letter-spacing: .8px; }
 .lang-ru .work-card h2 { margin-top: 7px; font-size: 14px; line-height: 1.35; letter-spacing: .9px; }
 .lang-ru .contact-block { gap: 26px; }
 .lang-ru .contact-block h2 { font-size: 38px; letter-spacing: 2.5px; }
 .lang-ru .contact-links { font-size: 14px; line-height: 1.4; letter-spacing: 1px; }
-.lang-ru .language-switch { font-size: 14px; }
+.lang-ru .language-switch { font-size: 14px; font-weight: 300; }
 
-.lang-ru .about-copy { gap: 72px; font-size: 14px; font-weight: 300; line-height: 1.45; letter-spacing: .4px; text-transform: none; }
+.lang-ru .about-copy { gap: 72px; font-size: 14px; font-weight: 200; line-height: 1.45; letter-spacing: .4px; text-transform: none; }
 .lang-ru .resume-toolbar h1 { font-size: 28px; letter-spacing: 2px; }
 .lang-ru .resume-download { font-size: 12px; letter-spacing: .8px; }
 
@@ -23,13 +23,16 @@
 .lang-ru .case-intro,
 .lang-ru .problem-section > p { font-size: 17px; line-height: 29px; }
 .lang-ru .case-tabs button,
+.lang-ru .device-tabs button,
+.lang-ru .process-section > p { font-weight: 300; }
+.lang-ru .case-tabs button,
 .lang-ru .process-section h2,
 .lang-ru .screens-heading h2 { font-size: 30px; }
 .lang-ru .process-section h3 { font-size: 17px; line-height: 28px; }
 .lang-ru .process-section > p,
 .lang-ru .screens-scroll-hint { font-size: 13px; line-height: 21px; }
 .lang-ru .device-tabs button { font-size: 20px; }
-.lang-ru .next-project { font-size: 26px; font-weight: 400; letter-spacing: 2px; }
+.lang-ru .next-project { font-size: 26px; font-weight: 300; letter-spacing: 2px; }
 
 @media (max-width: 760px) {
   .lang-ru .identity { font-size: clamp(9.5px, 2.9vw, 11px); letter-spacing: .3px; }
