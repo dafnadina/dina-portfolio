@@ -16,10 +16,6 @@
 .fragrantica-page .screen-bezel { height: 100%; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; border: 6px solid #000; border-radius: 40px; background: #000; }
 .fragrantica-page .screen-bezel img { display: block; width: 100%; height: auto; object-fit: initial; }
 .fragrantica-page .process-image img.is-contain { background: #f4eded; }
-.dark-theme .placeholder-project-page .placeholder-media { background: #505050; }
-.dark-theme .placeholder-project-page .hero-small .placeholder-media,
-.dark-theme .placeholder-project-page .hero-animation-frame { border-color: #fff; }
-.dark-theme .fragrantica-page .process-image img.is-contain { background: #2a2a2a; }
 
 @media (max-width:760px) {
   .placeholder-project-page .hero-small .placeholder-media { height: min(84vw, 335px); }

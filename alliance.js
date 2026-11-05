@@ -6,7 +6,7 @@ const allianceCopy = {
 document.querySelectorAll('[data-case-tab]').forEach((button) => {
   button.addEventListener('click', () => {
     document.querySelectorAll('[data-case-tab]').forEach((item) => item.classList.toggle('active', item === button));
-    document.querySelector('[data-case-copy]').textContent = allianceCopy[button.dataset.caseTab];
+    document.querySelector('[data-case-copy]').textContent = siteLanguage.t(allianceCopy[button.dataset.caseTab]);
   });
 });
 
@@ -56,10 +56,10 @@ let allianceProcessIndex = 0;
 const renderAllianceProcess = () => {
   const step = allianceProcess[allianceProcessIndex];
   const image = document.querySelector('[data-process-image]');
-  document.querySelector('[data-process-count]').textContent = `${allianceProcessIndex + 1}/${allianceProcess.length} ${step.name}`;
-  document.querySelector('[data-process-copy]').textContent = step.copy;
+  document.querySelector('[data-process-count]').textContent = `${allianceProcessIndex + 1}/${allianceProcess.length} ${siteLanguage.t(step.name)}`;
+  document.querySelector('[data-process-copy]').textContent = siteLanguage.t(step.copy);
   image.src = step.image;
-  image.alt = `DH Alliance design process: ${step.name.toLowerCase()} slide`;
+  image.alt = siteLanguage.isRussian ? `Этап работы DH Alliance: ${siteLanguage.t(step.name)}` : `DH Alliance design process: ${step.name.toLowerCase()} slide`;
 };
 document.querySelector('[data-process-prev]')?.addEventListener('click', () => {
   allianceProcessIndex = (allianceProcessIndex + allianceProcess.length - 1) % allianceProcess.length;
@@ -100,7 +100,7 @@ const renderAllianceScreens = () => {
     const screen = page[index];
     const image = slot.querySelector('img');
     image.src = screen.src;
-    image.alt = `DH Alliance ${screen.name.toLowerCase()} screen`;
+    image.alt = siteLanguage.t(`DH Alliance ${screen.name.toLowerCase()} screen`);
     slot.querySelector(':scope > div').scrollTop = 0;
   });
 };

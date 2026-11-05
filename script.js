@@ -1,7 +1,8 @@
-const themeButton = document.querySelector('.theme-switch');
+const languageButton = document.querySelector('.language-switch');
 const identity = document.querySelector('.identity');
 const introStorageKey = 'dina-portfolio-intro-seen';
-const themeStorageKey = 'dina-portfolio-theme';
+const languageStorageKey = 'dina-portfolio-language';
+const scrollRestoreKey = 'dina-portfolio-language-scroll';
 
 const hasSeenIntro = () => {
   try { return sessionStorage.getItem(introStorageKey) === 'true'; } catch { return false; }
@@ -31,15 +32,29 @@ if (document.body.classList.contains('intro-running')) {
 
 identity?.addEventListener('click', rememberIntro);
 
-const renderThemeButton = () => {
-  const isDark = document.documentElement.classList.contains('dark-theme');
-  themeButton.innerHTML = isDark ? '<span>Light / </span><strong>Dark</strong>' : '<strong>Light</strong><span> / Dark</span>';
+const renderLanguageButton = () => {
+  if (!languageButton) return;
+  const isRussian = document.documentElement.lang === 'ru';
+  languageButton.innerHTML = isRussian ? '<span>ENG / </span><strong>RU</strong>' : '<strong>ENG</strong><span> / RU</span>';
+  languageButton.setAttribute('aria-label', isRussian ? 'Переключить язык сайта' : 'Switch site language');
 };
 
-if (themeButton) renderThemeButton();
+renderLanguageButton();
 
-themeButton?.addEventListener('click', () => {
-  const isDark = document.documentElement.classList.toggle('dark-theme');
-  try { localStorage.setItem(themeStorageKey, isDark ? 'dark' : 'light'); } catch { /* Keep the theme for the current page. */ }
-  renderThemeButton();
+languageButton?.addEventListener('click', () => {
+  const nextLanguage = document.documentElement.lang === 'ru' ? 'en' : 'ru';
+  try {
+    sessionStorage.setItem(languageStorageKey, nextLanguage);
+    sessionStorage.setItem(scrollRestoreKey, JSON.stringify({ path: location.pathname, y: window.scrollY }));
+  } catch { /* The current page can still switch languages. */ }
+  location.reload();
+});
+
+window.addEventListener('load', () => {
+  try {
+    const saved = JSON.parse(sessionStorage.getItem(scrollRestoreKey) || 'null');
+    if (saved?.path !== location.pathname) return;
+    sessionStorage.removeItem(scrollRestoreKey);
+    requestAnimationFrame(() => window.scrollTo(0, saved.y));
+  } catch { /* Keep the browser's normal scroll position. */ }
 });

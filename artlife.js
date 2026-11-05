@@ -42,10 +42,10 @@ let artlifeProcessIndex = 0;
 const renderArtlifeProcess = () => {
   const step = artlifeProcessSteps[artlifeProcessIndex];
   const image = document.querySelector('[data-process-image]');
-  document.querySelector('[data-process-count]').textContent = `${artlifeProcessIndex + 1}/${artlifeProcessSteps.length} ${step.name}`;
-  document.querySelector('[data-process-copy]').textContent = step.copy;
+  document.querySelector('[data-process-count]').textContent = `${artlifeProcessIndex + 1}/${artlifeProcessSteps.length} ${siteLanguage.t(step.name)}`;
+  document.querySelector('[data-process-copy]').textContent = siteLanguage.t(step.copy);
   image.src = step.image;
-  image.alt = step.alt;
+  image.alt = siteLanguage.t(step.alt);
 };
 
 document.querySelector('[data-process-prev]')?.addEventListener('click', () => {

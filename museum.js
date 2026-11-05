@@ -6,7 +6,7 @@ const caseCopy = {
 document.querySelectorAll('[data-case-tab]').forEach((button) => {
   button.addEventListener('click', () => {
     document.querySelectorAll('[data-case-tab]').forEach((item) => item.classList.toggle('active', item === button));
-    document.querySelector('[data-case-copy]').textContent = caseCopy[button.dataset.caseTab];
+    document.querySelector('[data-case-copy]').textContent = siteLanguage.t(caseCopy[button.dataset.caseTab]);
   });
 });
 
@@ -19,7 +19,7 @@ let screenMode = 'mobile';
 
 document.querySelectorAll('.mobile-screen-viewport').forEach((viewport) => {
   viewport.tabIndex = 0;
-  viewport.setAttribute('aria-label', `Scroll the ${viewport.querySelector('img').alt}`);
+  viewport.setAttribute('aria-label', siteLanguage.isRussian ? `Прокрутить экран: ${viewport.querySelector('img').alt}` : `Scroll the ${viewport.querySelector('img').alt}`);
 });
 
 const updateScreensPage = () => {
@@ -67,10 +67,10 @@ const processSteps = [
 const updateProcess = () => {
   const step = processSteps[processIndex];
   const image = document.querySelector('[data-process-image]');
-  document.querySelector('[data-process-count]').textContent = `${processIndex + 1}/3 ${step.name}`;
-  document.querySelector('[data-process-copy]').textContent = step.copy;
+  document.querySelector('[data-process-count]').textContent = `${processIndex + 1}/3 ${siteLanguage.t(step.name)}`;
+  document.querySelector('[data-process-copy]').textContent = siteLanguage.t(step.copy);
   image.src = step.image;
-  image.alt = step.alt;
+  image.alt = siteLanguage.t(step.alt);
   image.classList.toggle('is-contain', Boolean(step.contain));
 };
 document.querySelector('[data-process-prev]')?.addEventListener('click', () => { processIndex = (processIndex + 2) % 3; updateProcess(); });
