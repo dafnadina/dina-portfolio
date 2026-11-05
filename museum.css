@@ -27,10 +27,10 @@
 .project-links a + a { margin-top: 16px; }
 .project-links img { width: 13px; height: 14.16px; margin-right: 3px; transform: rotate(45deg); transition: filter .2s ease; }
 .case-highlights { display: flex; margin: 20px 0 0 auto; color: #000; font-size: 16px; line-height: 20px; text-align: center; }
-.case-highlight { display: flex; width: 163px; height: 106px; flex: 0 0 163px; align-items: center; justify-content: center; border-radius: 20px 0 0 20px; padding: 5px 10px; background: #f1e7f8; overflow-wrap: anywhere; }
-.case-highlight:not(:last-child) { border-right: 1px solid #000; }
+.case-highlight { display: flex; width: 163px; height: 106px; flex: 0 0 163px; align-items: center; justify-content: center; border-right: 1px solid #000; border-radius: 20px 0 0 20px; padding: 5px 10px; background: #f1e7f8; overflow-wrap: normal; word-break: normal; hyphens: none; }
 .case-highlight:nth-child(2) { width: 109px; flex-basis: 109px; background: #ddf6e6; }
 .case-highlight:nth-child(3) { width: 157px; flex-basis: 157px; background: #e6f4fe; }
+.fragrantica-page .case-highlight:nth-child(2) { width: 130px; flex-basis: 130px; }
 .case-intro { position: absolute; top: 873px; left: 50%; width: 600px; margin: 0; transform: translateX(-50%); font-size: 20px; line-height: 28px; text-align: center; }
 .showcase-grid { position: absolute; top: 1171px; left: -1px; display: grid; grid-template-columns: repeat(3,448px); gap: 20px; }
 .showcase-grid img { width: 448px; height: 528px; object-fit: cover; }
