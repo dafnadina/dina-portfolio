@@ -14,8 +14,8 @@
     <script src="lang-init.js?v=ru-preview-8"></script>
     <link rel="preload" as="image" href="assets/project-dh-hero-mockup.webp" />
     <link rel="stylesheet" href="styles.css?v=ru-preview-8" />
-    <link rel="stylesheet" href="museum.css?v=mobile-20261105-2" />
-    <link rel="stylesheet" href="alliance.css?v=mobile-20261105-1" />
+    <link rel="stylesheet" href="museum.css?v=mobile-20261105-3" />
+    <link rel="stylesheet" href="alliance.css?v=mobile-20261105-2" />
     <link rel="stylesheet" href="case-motion.css?v=20261102-2" />
     <link rel="stylesheet" href="russian-type.css?v=mobile-20261105-1" />
   </head>
@@ -34,7 +34,7 @@
           <div class="hero-small"><div class="hero-small-window"><img src="assets/project-dh-hero-mockup.webp" alt="Partial view of a MacBook showing the DH Alliance Pushkin project" /></div></div>
           <div class="hero-large">
             <div class="hero-animation-frame">
-              <iframe src="https://player.vimeo.com/video/1109030775?autoplay=1&amp;muted=1&amp;loop=1&amp;autopause=0&amp;background=1&amp;playsinline=1" title="DH Alliance interface overview" allow="autoplay; fullscreen; picture-in-picture" loading="eager"></iframe>
+              <iframe data-desktop-src="https://player.vimeo.com/video/1109030775?autoplay=1&amp;muted=1&amp;loop=1&amp;autopause=0&amp;background=1&amp;playsinline=1" title="DH Alliance interface overview" allow="autoplay; fullscreen; picture-in-picture" loading="eager"></iframe>
             </div>
           </div>
         </section>
@@ -54,8 +54,8 @@
         <p class="case-intro">DH Alliance is a platform for discovering digital humanities projects, job opportunities and tools.<br />It helps students and early-career researchers find relevant initiatives,<br />connect with specialists and navigate a fragmented professional field</p>
 
         <section class="showcase-grid" aria-label="DH Alliance project mockups">
-          <img src="assets/project-dh-showcase-projects.webp" alt="DH Alliance projects page displayed on a MacBook" loading="lazy" decoding="async" />
-          <img src="assets/project-dh-showcase-tools.webp" alt="DH Alliance tools page displayed on a MacBook" loading="lazy" decoding="async" />
+          <picture><source media="(max-width: 480px)" srcset="assets/project-dh-showcase-projects-phone.webp" /><img src="assets/project-dh-showcase-projects.webp" alt="DH Alliance projects page displayed on a MacBook" loading="lazy" decoding="async" /></picture>
+          <picture><source media="(max-width: 480px)" srcset="assets/project-dh-showcase-tools-phone.webp" /><img src="assets/project-dh-showcase-tools.webp" alt="DH Alliance tools page displayed on a MacBook" loading="lazy" decoding="async" /></picture>
         </section>
 
         <section class="problem-section">
@@ -87,10 +87,10 @@
             <div class="screens-content">
               <div class="desktop-screens-stage">
                 <div class="desktop-screen-card desktop-screen-card--left" data-alliance-screen-left>
-                  <div><img src="assets/project-dh-screens/projects.webp" alt="DH Alliance projects screen" loading="lazy" /></div>
+                  <div><picture><source media="(max-width: 480px)" srcset="assets/project-dh-screens/projects-phone.webp" /><img src="assets/project-dh-screens/projects.webp" alt="DH Alliance projects screen" loading="lazy" /></picture></div>
                 </div>
                 <div class="desktop-screen-card desktop-screen-card--right" data-alliance-screen-right>
-                  <div><img src="assets/project-dh-screens/main.webp" alt="DH Alliance home screen" loading="lazy" /></div>
+                  <div><picture><source media="(max-width: 480px)" srcset="assets/project-dh-screens/main-phone.webp" /><img src="assets/project-dh-screens/main.webp" alt="DH Alliance home screen" loading="lazy" /></picture></div>
                 </div>
               </div>
             </div>
@@ -109,7 +109,8 @@
     </footer>
     <script src="i18n.js?v=ru-preview-8"></script>
     <script src="script.js?v=ru-preview-8"></script>
-    <script src="alliance.js?v=mobile-20261105-1"></script>
+    <script src="alliance.js?v=mobile-20261105-2"></script>
+    <script src="screen-preload.js?v=20261105-1"></script>
     <script src="case-typography.js?v=20261105-2"></script>
     <script src="case-motion.js?v=20261103-1"></script>
   </body>

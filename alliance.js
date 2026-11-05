@@ -3,6 +3,16 @@ const allianceCopy = {
   solution: 'A structured discovery platform connects people, projects, jobs and tools through clear navigation and a scalable information architecture. It creates one accessible entry point into the digital humanities community'
 };
 
+const allianceDesktopVideo = document.querySelector('.hero-animation-frame iframe[data-desktop-src]');
+const allianceDesktopVideoLayout = window.matchMedia('(min-width: 761px)');
+const updateAllianceDesktopVideo = () => {
+  if (!allianceDesktopVideo) return;
+  if (allianceDesktopVideoLayout.matches) allianceDesktopVideo.src = allianceDesktopVideo.dataset.desktopSrc;
+  else allianceDesktopVideo.removeAttribute('src');
+};
+allianceDesktopVideoLayout.addEventListener('change', updateAllianceDesktopVideo);
+updateAllianceDesktopVideo();
+
 document.querySelectorAll('[data-case-tab]').forEach((button) => {
   button.addEventListener('click', () => {
     document.querySelectorAll('[data-case-tab]').forEach((item) => item.classList.toggle('active', item === button));
@@ -96,6 +106,14 @@ let allianceScreenPageIndex = 0;
 let allianceMobileScreenIndex = 0;
 const allianceMobileLayout = window.matchMedia('(max-width: 760px)');
 const allianceScreens = allianceScreenPages.flat();
+const alliancePhoneScreens = new Set(['projects', 'main', 'project', 'news']);
+const alliancePhoneSource = (screen) => alliancePhoneScreens.has(screen.src.split('/').pop().replace('.webp', ''))
+  ? screen.src.replace('.webp', '-phone.webp') : screen.src;
+window.getAllianceScreenPreloadUrls = () => {
+  const index = allianceMobileLayout.matches ? allianceMobileScreenIndex : allianceScreenPageIndex * 2;
+  return [allianceScreens[index], allianceScreens[(index + 1) % allianceScreens.length]].map((screen) =>
+    window.matchMedia('(max-width: 480px)').matches ? alliancePhoneSource(screen) : screen.src);
+};
 const allianceScreenSlots = [document.querySelector('[data-alliance-screen-left]'), document.querySelector('[data-alliance-screen-right]')];
 const renderAllianceScreens = () => {
   const page = allianceScreenPages[allianceScreenPageIndex];
@@ -103,10 +121,12 @@ const renderAllianceScreens = () => {
     if (allianceMobileLayout.matches && index === 1) return;
     const screen = allianceMobileLayout.matches ? allianceScreens[allianceMobileScreenIndex] : page[index];
     const image = slot.querySelector('img');
+    slot.querySelector('picture source').srcset = alliancePhoneSource(screen);
     image.src = screen.src;
     image.alt = siteLanguage.t(`DH Alliance ${screen.name.toLowerCase()} screen`);
     slot.querySelector(':scope > div').scrollTop = 0;
   });
+  document.querySelector('.screens-section').dispatchEvent(new Event('screens:changed'));
 };
 document.querySelector('[data-alliance-screen-prev]')?.addEventListener('click', () => {
   if (allianceMobileLayout.matches) {
