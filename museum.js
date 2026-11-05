@@ -16,7 +16,10 @@ const screenPages = {
 };
 const screenPageIndex = { mobile: 0, desktop: 0 };
 const mobileScreenLayout = window.matchMedia('(max-width: 760px)');
+const mobileScreenCards = [...document.querySelectorAll('[data-mobile-screens] .mobile-screen-card')];
+const mobileScreensPerPage = screenPages.mobile[0]?.querySelectorAll('.mobile-screen-card').length || 1;
 const desktopScreenCards = [...document.querySelectorAll('[data-desktop-page] .desktop-screen-card')];
+let mobileScreenIndex = 0;
 let mobileDesktopIndex = 0;
 let screenMode = 'mobile';
 
@@ -26,11 +29,15 @@ document.querySelectorAll('.mobile-screen-viewport').forEach((viewport) => {
 });
 
 const updateScreensPage = () => {
+  mobileScreenCards.forEach((card, index) => card.classList.toggle('is-mobile-current', index === mobileScreenIndex));
   desktopScreenCards.forEach((card, index) => card.classList.toggle('is-mobile-current', index === mobileDesktopIndex));
   Object.entries(screenPages).forEach(([mode, pages]) => {
     pages.forEach((page, index) => {
-      const activeIndex = mode === 'desktop' && mobileScreenLayout.matches
-        ? Math.floor(mobileDesktopIndex / 2) : screenPageIndex[mode];
+      const activeIndex = mobileScreenLayout.matches && mode === 'mobile'
+        ? Math.floor(mobileScreenIndex / mobileScreensPerPage)
+        : mobileScreenLayout.matches && mode === 'desktop'
+          ? Math.floor(mobileDesktopIndex / 2)
+          : screenPageIndex[mode];
       const isActive = index === activeIndex;
       page.classList.toggle('active', isActive);
       page.hidden = !isActive;
@@ -40,6 +47,12 @@ const updateScreensPage = () => {
 };
 
 const changeScreensPage = (direction) => {
+  if (screenMode === 'mobile' && mobileScreenLayout.matches) {
+    mobileScreenIndex = (mobileScreenIndex + direction + mobileScreenCards.length) % mobileScreenCards.length;
+    screenPageIndex.mobile = Math.floor(mobileScreenIndex / mobileScreensPerPage);
+    updateScreensPage();
+    return;
+  }
   if (screenMode === 'desktop' && mobileScreenLayout.matches) {
     mobileDesktopIndex = (mobileDesktopIndex + direction + desktopScreenCards.length) % desktopScreenCards.length;
     screenPageIndex.desktop = Math.floor(mobileDesktopIndex / 2);
@@ -48,6 +61,7 @@ const changeScreensPage = (direction) => {
   }
   const pages = screenPages[screenMode];
   screenPageIndex[screenMode] = (screenPageIndex[screenMode] + direction + pages.length) % pages.length;
+  if (screenMode === 'mobile') mobileScreenIndex = screenPageIndex.mobile * mobileScreensPerPage;
   if (screenMode === 'desktop') mobileDesktopIndex = screenPageIndex.desktop * 2;
   updateScreensPage();
 };
@@ -99,8 +113,12 @@ document.querySelectorAll('[data-screen-mode]').forEach((button) => {
 });
 
 mobileScreenLayout.addEventListener('change', ({ matches }) => {
-  if (matches) mobileDesktopIndex = screenPageIndex.desktop * 2;
-  else screenPageIndex.desktop = Math.floor(mobileDesktopIndex / 2);
+  if (matches) {
+    mobileDesktopIndex = screenPageIndex.desktop * 2;
+  } else {
+    screenPageIndex.mobile = Math.floor(mobileScreenIndex / mobileScreensPerPage);
+    screenPageIndex.desktop = Math.floor(mobileDesktopIndex / 2);
+  }
   updateScreensPage();
 });
 updateScreensPage();

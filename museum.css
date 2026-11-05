@@ -167,6 +167,8 @@
   .gnm-page .screens-section.show-desktop .screens-content { height: auto; }
   .gnm-page .screens-track { width: 100%; overflow-x: auto; }
   .gnm-page .mobile-screen-card { width: 100%; height: min(140vw, 480px); flex-basis: 100%; }
+  .gnm-page .screens-page .mobile-screen-card { display: none; }
+  .gnm-page .screens-page .mobile-screen-card.is-mobile-current { display: block; }
   .gnm-page .mobile-screen-card img { width: 100%; height: auto; }
   .gnm-page .desktop-screens-stage { position: static; width: 100%; height: auto; }
   .gnm-page .desktop-screens-page.active { position: static; display: block; }
