@@ -4,6 +4,11 @@ const introStorageKey = 'dina-portfolio-intro-seen';
 const languageStorageKey = 'dina-portfolio-language';
 const scrollRestoreKey = 'dina-portfolio-language-scroll';
 const mobileIntroLayout = window.matchMedia('(max-width: 760px)');
+const enteredFromOutside = () => {
+  if (performance.getEntriesByType('navigation')[0]?.type !== 'navigate') return false;
+  if (!document.referrer) return true;
+  try { return new URL(document.referrer).origin !== location.origin; } catch { return true; }
+};
 
 const hasSeenIntro = () => {
   try { return sessionStorage.getItem(introStorageKey) === 'true'; } catch { return false; }
@@ -26,7 +31,7 @@ if (document.body.classList.contains('intro-running')) {
   } catch { /* A malformed saved position should not stop the intro. */ }
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     finishIntro(true);
-  } else if (languageReload || (hasSeenIntro() && !mobileIntroLayout.matches)) {
+  } else if (languageReload || (hasSeenIntro() && (!mobileIntroLayout.matches || !enteredFromOutside()))) {
     finishIntro();
   } else {
     identity?.addEventListener('animationend', (event) => {

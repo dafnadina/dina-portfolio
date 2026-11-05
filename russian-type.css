@@ -32,6 +32,7 @@
 .lang-ru .next-project { font-size: 26px; font-weight: 400; letter-spacing: 2px; }
 
 @media (max-width: 760px) {
+  .lang-ru .contact-block { gap: 48px; }
   .lang-ru .identity { font-size: clamp(9.5px, 2.9vw, 11px); letter-spacing: .3px; }
   .lang-ru .portfolio-header nav a { font-size: 11px; letter-spacing: .5px; }
   .lang-ru .work-meta { gap: 8px; font-size: 10.5px; letter-spacing: .5px; }
