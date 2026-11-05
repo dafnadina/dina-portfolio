@@ -33,6 +33,7 @@
 .fragrantica-page .case-highlight:nth-child(2) { width: 130px; flex-basis: 130px; }
 @media (min-width: 761px) {
   .lang-ru .gnm-page .case-shell h1 { font-size: 42px; letter-spacing: 2.5px; }
+  .lang-ru .alliance-page .case-shell h1 { font-size: 42px; letter-spacing: 2px; }
   .lang-ru .fragrantica-page .case-highlight:nth-child(2),
   .lang-ru .artlife-page .case-highlight:nth-child(2) { width: 150px; flex-basis: 150px; }
 }
