@@ -16,6 +16,8 @@ a { color: inherit; text-decoration: none; }
 .intro-running .identity { position: fixed; z-index: 100; top: 50%; left: 50%; margin: 0; transform: translate(-50%, -50%); animation: identityIntro .5s cubic-bezier(.4, 0, .2, 1) 2s forwards, introTextColor 2.5s linear both; will-change: transform; }
 .intro-running .identity > span:first-child { animation: typeIntro .7s steps(18, end) .08s both; }
 .intro-running .identity > span:last-child { animation: typeIntro .7s steps(16, end) .8s both; }
+.lang-ru .intro-running .identity > span:first-child { animation-timing-function: steps(17, end); }
+.lang-ru .intro-running .identity > span:last-child { animation-timing-function: steps(20, end); }
 .intro-running .identity-dot { opacity: 0; }
 .intro-running .portfolio-header nav,
 .intro-running .portfolio-main,
@@ -82,6 +84,7 @@ a { color: inherit; text-decoration: none; }
 
 .portfolio-header { position: relative; height: 239px; padding-top: 40px; text-transform: uppercase; }
 .identity { display: flex; width: max-content; align-items: center; gap: 16px; margin: 0 auto; font-size: 24px; letter-spacing: 1.92px; }
+.identity > span:not(.identity-dot) { font-family: "Kode Mono", monospace; font-weight: 400; }
 .identity img { width: 27px; height: 27px; margin: -8px; }
 .identity-dot { width: 11px; height: 11px; flex: 0 0 11px; border-radius: 50%; background: var(--violet); filter: blur(4px); transition: background-color .2s ease, transform .2s ease; }
 .identity:hover .identity-dot, .identity:focus-visible .identity-dot, .identity:active .identity-dot { background: #0637ff; transform: scale(1.15); }

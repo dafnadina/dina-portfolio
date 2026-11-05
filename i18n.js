@@ -1,11 +1,12 @@
 // English is the source copy. Russian is applied before the case-page scripts run.
 const russianCopy = new Map(Object.entries({
   // Shared navigation and controls.
+  'Dina Radosavlevich': 'Дина Радосавлевич',
   'Product Designer': 'Продуктовый дизайнер',
   'Works': 'Работы',
   'About me': 'Обо мне',
   'Resume': 'Резюме',
-  'Feel free to reach out': 'Свяжитесь со мной',
+  'Feel free to reach out': 'Предложить работу или задать вопрос:',
   '< back': '< назад',
   'Next Project': 'Следующий проект',
   'Primary navigation': 'Основная навигация',
@@ -270,6 +271,10 @@ if (siteLanguage.isRussian) {
     const trimmed = original.trim();
     const translated = russianCopy.get(trimmed);
     if (translated) node.textContent = original.replace(trimmed, translated);
+  }
+
+  for (const element of document.querySelectorAll('[data-ru]')) {
+    element.textContent = element.dataset.ru;
   }
 
   for (const element of document.querySelectorAll('[alt], [aria-label], [title], [data-case-text]')) {
