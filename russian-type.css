@@ -5,13 +5,14 @@
 .lang-ru .identity { font-size: 21px; letter-spacing: 1.5px; }
 .lang-ru .identity > span:not(.identity-dot) { font-weight: 300; }
 .lang-ru .portfolio-header nav a { font-size: 14px; letter-spacing: 1px; }
-.lang-ru .work-meta { font-size: 12px; letter-spacing: .8px; }
-.lang-ru .work-card h2 { font-size: 14px; letter-spacing: .9px; }
+.lang-ru .work-meta { height: 32px; font-size: 12px; letter-spacing: .8px; }
+.lang-ru .work-card h2 { margin-top: 7px; font-size: 14px; line-height: 1.35; letter-spacing: .9px; }
+.lang-ru .contact-block { gap: 26px; }
 .lang-ru .contact-block h2 { font-size: 38px; letter-spacing: 2.5px; }
-.lang-ru .contact-links { font-size: 14px; letter-spacing: 1px; }
+.lang-ru .contact-links { font-size: 14px; line-height: 1.4; letter-spacing: 1px; }
 .lang-ru .language-switch { font-size: 14px; }
 
-.lang-ru .about-copy { font-size: 14px; font-weight: 300; letter-spacing: .4px; text-transform: none; }
+.lang-ru .about-copy { gap: 72px; font-size: 14px; font-weight: 300; line-height: 1.45; letter-spacing: .4px; text-transform: none; }
 .lang-ru .resume-toolbar h1 { font-size: 28px; letter-spacing: 2px; }
 .lang-ru .resume-download { font-size: 12px; letter-spacing: .8px; }
 
@@ -20,13 +21,13 @@
 .lang-ru .project-links a { font-size: 13px; }
 .lang-ru .case-highlights { font-size: 14px; }
 .lang-ru .case-intro,
-.lang-ru .problem-section > p { font-size: 17px; line-height: 26px; }
+.lang-ru .problem-section > p { font-size: 17px; line-height: 29px; }
 .lang-ru .case-tabs button,
 .lang-ru .process-section h2,
 .lang-ru .screens-heading h2 { font-size: 30px; }
-.lang-ru .process-section h3 { font-size: 17px; line-height: 26px; }
+.lang-ru .process-section h3 { font-size: 17px; line-height: 28px; }
 .lang-ru .process-section > p,
-.lang-ru .screens-scroll-hint { font-size: 13px; line-height: 19px; }
+.lang-ru .screens-scroll-hint { font-size: 13px; line-height: 21px; }
 .lang-ru .device-tabs button { font-size: 20px; }
 .lang-ru .next-project { font-size: 26px; font-weight: 400; letter-spacing: 2px; }
 
@@ -39,22 +40,23 @@
   .lang-ru .contact-links { font-size: 11px; letter-spacing: .5px; }
   .lang-ru .language-switch { font-size: 13px; }
 
-  .lang-ru .about-copy { font-size: 12.5px; letter-spacing: .3px; }
+  .lang-ru .about-copy { gap: 48px; font-size: 12.5px; letter-spacing: .3px; }
   .lang-ru .resume-toolbar h1 { font-size: 19px; letter-spacing: 1.2px; }
   .lang-ru .resume-download { font-size: 10.5px; letter-spacing: .4px; }
 
   .lang-ru .museum-page .case-shell h1 { font-size: 23px; letter-spacing: 1.2px; }
   .lang-ru .alliance-page .case-shell h1 { font-size: 21px; letter-spacing: .6px; }
+  .lang-ru .case-title-meta { margin-top: .5em; }
   .lang-ru .project-links a { font-size: 12px; }
   .lang-ru .case-highlights { font-size: 11.5px; }
   .lang-ru .case-intro,
-  .lang-ru .problem-section > p { font-size: 14.5px; line-height: 22px; }
+  .lang-ru .problem-section > p { font-size: 14.5px; line-height: 24px; }
   .lang-ru .case-tabs button { font-size: 21px; }
   .lang-ru .process-section h2,
   .lang-ru .screens-heading h2 { font-size: 24px; }
-  .lang-ru .process-section h3 { font-size: 14.5px; line-height: 22px; }
+  .lang-ru .process-section h3 { font-size: 14.5px; line-height: 24px; }
   .lang-ru .process-section > p,
-  .lang-ru .screens-scroll-hint { font-size: 11px; line-height: 17px; }
+  .lang-ru .screens-scroll-hint { font-size: 11px; line-height: 19px; }
   .lang-ru .device-tabs button { font-size: 15px; }
   .lang-ru .next-project { font-size: 21px; letter-spacing: 1.5px; }
 }
